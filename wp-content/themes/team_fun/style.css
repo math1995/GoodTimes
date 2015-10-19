@@ -1,0 +1,14 @@
+/**
+ * Theme Name:   Fun
+ * Author:       TeamFun
+ */
+
+header {
+	width: 80%;
+}
+
+header .entrance {
+	width: 80%;
+	height: 30px;
+	background-color: black;
+}
