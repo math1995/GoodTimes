@@ -52,8 +52,8 @@ function custom_post_type() {
 
 	//  Catégories de sortie
 	register_taxonomy(
-		'type', 
-		'projet',
+		'categorie', 
+		'categorie',
 		array(
 			'label' => 'Catégorie de sortie',
 			'labels' => array(
@@ -212,3 +212,9 @@ if($_POST) {
 	}
 }
 
+function my_getRecipee_info($my_date, $duration) {
+	$my_date = get_the_date();
+	$duration = get_taxonomy('duree')
+}
+
+apply_filters( 'get_the_date', $the_date, $format );
