@@ -2098,7 +2098,24 @@ select[multiple].input-lg {
     height: 200px; }
   section.moment article.soiree {
     background-image: url("http://pipsum.com/200x200.jpg");
-    height: 200px; } }
+    height: 200px; }
+  section.recetteduj {
+    background-color: #f3f3f3;
+    border-radius: 10px; }
+    section.recetteduj h2 {
+      padding: 10px;
+      color: #a11526;
+      text-align: center;
+      text-transform: uppercase; }
+    section.recetteduj p {
+      padding: 10px;
+      text-align: justify; }
+    section.recetteduj .lireplus {
+      margin-bottom: 0;
+      background-color: #2f2f2f; }
+      section.recetteduj .lireplus p {
+        color: white;
+        text-decoration: none; } }
 
 /* TABLET */
 @media screen and (min-width: 768px) and (max-width: 992px) {

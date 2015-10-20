@@ -2,24 +2,38 @@
 
 <?php get_header(); ?> 
 
-<div class="main page"> 
+<section class="slider"></section>
 
-<?php if (have_posts()) : ?> 
-	<?php while (have_posts()) : the_post(); ?> 
+<section class="moment">
+	<article class="matinee">
+		<p>Matinée</p>
+	</article>
+	<article class="journee">
+		<p>Journée</p>
+	</article>
 
-<div class="post"> 
-	<h1 class="post-title">
-		<?php the_title(); ?>
-	</h1> 
-	<div class="post-content"> 
-		<p>Nombre de Posts : <strong><?php echo wp_count_posts()->publish; ?></strong>
+	<article class="soiree">
+		<p>Soirée</p>
+	</article>
+</section>
 
-		</p> <p>Nombre de Pages : 
-		<strong><?php echo wp_count_posts('page')->publish; ?></strong></p> 
-		<p>Nombre de commentaires publiés : <strong><?php echo wp_count_comments()->approved; ?></strong></p> 
-	</div> 
-</div>
+<section class="recetteduj">
+	<article>
+		<h2>La recette !</h2>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas orci ante, porta quis mollis a, efficitur
+			non risus. Nulla interdum leo at massa cursus, sed eleifend sapien mollis. Mauris commodo at nunc ac consequat. 
+			Integer rutrum arcu justo, eget luctus lacus mattis egestas. Sed suscipit venenatis ante, at molestie ligula accumsan non. 
+			Suspendisse lectus dolor, tincidunt eu tortor laoreet, faucibus porta ipsum. Proin aliquam ultricies interdum. Aenean 
+			fringilla sapien sit amet leo sagittis, vel vehicula ex placerat. Donec consectetur sapien id gravida rutrum.
+			at lorem tempor, tempus odio ut, interdum est. Nulla sit amet nisl mollis, fringilla sapien non, euismod ligula.
+		</p>
+		<a href="#">
+			<div class="lireplus">
+				<p>Lire la suite</p>
+			</div>
+		</a>
+	</article>
+</section>
 
-	<?php endwhile; ?> 
-	<?php endif; ?> 
-</div> 
+<?php get_footer(); ?>
