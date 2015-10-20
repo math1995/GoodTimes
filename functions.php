@@ -144,3 +144,70 @@ add_filter( 'post_thumbnail_html', 'my_get_img_responsive', 10 ); //On supprime 
 add_filter( 'image_send_to_editor', 'my_get_img_responsive', 10 );
 add_filter( 'wp_get_attachment_link', 'my_get_img_responsive', 10 );
 
+// Fonction envoi de mail
+// 
+
+function my_send_mail() {
+	$siteOwnersEmail = 'mathieulevi@gmail.com';
+
+if($_POST) {
+
+	$name = trim(stripslashes($_POST['contactName']));
+	$email = trim(stripslashes($_POST['contactEmail']));
+	$subject = trim(stripslashes($_POST['contactSubject']));
+	$contact_message = trim(stripslashes($_POST['contactMessage']));
+	$error = array();
+
+	// Check Name
+	if (strlen($name) < 2) {
+		$error['name'] = "Entrez votre nom s'il vous plait";
+	}
+	// Check Email
+	if (!preg_match('/^[a-z0-9&\'\.\-_\+]+@[a-z0-9\-]+\.([a-z0-9\-]+\.)*+[a-z]{2}/is', $email)) {
+		$error['email'] = "Entrez une adresse email valide s'il vous plait";
+	}
+	// Check Message
+	if (strlen($contact_message) < 4) {
+		$error['message'] = "Un peu plus de précisions svp";
+	}
+	// Subject
+	if ($subject == '') {
+		$subject = "Envoi";
+	}
+
+	$message = "Email de: " . $name . "<br />";
+	$message .= "Adresse email: " . $email . "<br />";
+	$message .= "Message: <br />";
+	$message .= $contact_message;
+	$message .= "<br /> ----- <br /> Ce message a été envoyé depuis mon formulaire <br />";
+
+	$from =  $name . " <" . $email . ">";
+
+	$headers = "De: " . $from . "\r\n";
+	$headers .= "Réponse à: ". $email . "\r\n";
+	$headers .= "MIME-Version: 1.0\r\n";
+	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+
+	if ( empty($error) ) {
+
+		ini_set("sendmail_from", $siteOwnersEmail);
+		$mail = mail($siteOwnersEmail, $subject, $message, $headers);
+
+		if ($mail) {
+			$error['OK'] = "done";
+			echo json_encode($error);
+		} else {
+			$error['sending'] = "Il y a eu un problème, réésayez s'il vous plait";
+			echo json_encode($error);
+		}
+
+	}
+
+	else {
+
+		echo json_encode($error);
+
+		}
+	}
+}
