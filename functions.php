@@ -83,30 +83,30 @@ function custom_post_type() {
 // 
 // 
 
-function my_get_all_post($args) {
-	$args = array( 'numberposts' => -1); 
-	$posts= get_posts( $args );
-	if ($posts) {
-	    foreach ($posts as $post) {
-	        setup_postdata( $GLOBALS['post'] =& $args);
-	        the_title();
-	        the_excerpt();
-	        the_post_thumbnail("small");
-	    }
-	}
-	return ($post);
-}
+// function my_get_all_post($args) {
+// 	$args = array( 'numberposts' => -1); 
+// 	$posts= get_posts( $args );
+// 	if ($posts) {
+// 	    foreach ($posts as $post) {
+// 	        setup_postdata( $GLOBALS['post'] =& $args);
+// 	        the_title();
+// 	        the_excerpt();
+// 	        the_post_thumbnail("small");
+// 	    }
+// 	}
+// 	return ($post);
+// }
 
-function my_get_random_post() {
-	$args = my_get_all_post($args);
-	if ($args == NULL) {
-		echo "Il n'y a pas de recette du jour"
-	}
-	else
-		$args = mt_rand($args) * time();
-		echo $args
+// function my_get_random_post() {
+// 	$args = my_get_all_post($args);
+// 	if ($args == NULL) {
+// 		echo "Il n'y a pas de recette du jour"
+// 	}
+// 	else
+// 		$args = mt_rand($args) * time();
+// 		echo $args
 
-}
+// }
 
 
 //
