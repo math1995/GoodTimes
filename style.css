@@ -4,7 +4,97 @@
 	Theme URI: http://google.fr
 	Author: Eden, Noémie, Benjamin, Mathieu, Rémi.
 */
+<<<<<<< HEAD
+=======
+/* Colors */
+/* Fonts size */
+/* MEDIA WIDTHS */
+/* TOOLS */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+.clear {
+  clear: both; }
+
+html {
+  margin: 0px !important; }
+
+body {
+  font-family: "Montserrat";
+  font-size: 15px;
+  color: black;
+  font-weight: 400; }
+
+h2 {
+  margin: 0px;
+  line-height: 100%; }
+
+div.headerCategory {
+  background-size: cover;
+  width: 100%; }
+  div.headerCategory .headerPic {
+    background: url("http://lorempixel.com/1920/300");
+    height: 300px; }
+  div.headerCategory .navbarCategory {
+    font-family: "Montserrat";
+    font-size: 18px;
+    height: 60px;
+    background: #f4f4f4;
+    padding: 0px;
+    color: #a11526;
+    -webkit-box-shadow: 0px -20px 80px 12px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0px -20px 80px 12px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px -20px 80px 12px rgba(0, 0, 0, 0.35); }
+    div.headerCategory .navbarCategory h2 {
+      line-height: 60px;
+      text-transform: uppercase; }
+      @media screen and (max-width: 768px) {
+        div.headerCategory .navbarCategory h2 {
+          font-size: 15px; } }
+
+section.eventsList article.eventItem {
+  background: #eeeeee;
+  margin-top: 40px;
+  padding: 0px; }
+  section.eventsList article.eventItem .eventThumbnail {
+    width: auto;
+    height: 200px;
+    background: url("http://lorempixel.com/500/500");
+    background-size: cover; }
+  section.eventsList article.eventItem .eventContent {
+    padding: 0 20px; }
+    section.eventsList article.eventItem .eventContent .eventTitle {
+      font-size: 15px;
+      color: #a11526;
+      font-family: "Montserrat";
+      font-weight: 400;
+      text-transform: uppercase; }
+    section.eventsList article.eventItem .eventContent .eventDescri {
+      font-family: "Montserrat"; }
+    section.eventsList article.eventItem .eventContent aside.eventInfo {
+      width: 100%;
+      height: 40px;
+      background: #2f2f2f; }
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  footer div {
+    display: none; } }
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  footer div {
+    display: none; } }
+
+@media screen and (min-width: 992px) and (max-width: 1800px) {
+  footer {
+    width: 100%;
+    height: 50px;
+    color: white;
+    background-color: #373737;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Montserrat'; } }
+
+>>>>>>> origin/master
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -2027,56 +2117,220 @@ select[multiple].input-lg {
   .hidden-print {
     display: none !important; } }
 
+<<<<<<< HEAD
 /* Colors */
 /* Fonts size */
+/* MEDIA WIDTHS */
 /* TOOLS */
 .clear {
   clear: both; }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
-  .container {
-    background-color: grey;
-    width: 100%;
-    height: auto; }
-  .team img {
-    width: 300px;
-    height: 300px;
-    list-style: none;
-    position: relative; } }
-
-/* TABLET */
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .container {
-    width: 100%;
-    height: 600px; }
-    .container .bg-img {
+  section.content {
+    width: 100%; }
+    section.content .bg-img {
       background-image: url("img/page_contact.jpeg");
       background-repeat: no-repeat;
       background-size: cover;
       width: 100%;
-      height: 100%; }
-  .team {
-    width: 980px; }
-    .team ul {
-      list-style: none;
-      width: 100%;
-      height: auto;
+      height: 200px; }
+      section.content .bg-img form.desktop {
+        display: none; }
+    section.content form {
       text-align: center;
-      margin-left: 30px; }
-    .team ul li img {
-      display: block;
-      float: left;
-      width: 130px;
-      height: 130px;
-      position: relative;
-      margin: 15px; } }
+      margin-top: 20px; }
+      section.content form h2 {
+        font-weight: 400;
+        margin-bottom: 20px; }
+      section.content form input {
+        margin-bottom: 10px;
+        outline: none; }
+      section.content form textarea {
+        outline: none; }
+  section.team {
+    display: none; } }
 
+/* TABLET */
+@media screen and (min-width: 770px) and (max-width: 992px) {
+  .content {
+    width: 100%; }
+    .content .bg-img {
+      background-image: url("img/page_contact.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 600px; }
+      .content .bg-img form.desktop {
+        text-align: center;
+        top: 30%;
+        left: 35%;
+        width: 300px;
+        position: absolute; }
+        .content .bg-img form.desktop h2 {
+          font-weight: 400;
+          margin-bottom: 20px; }
+        .content .bg-img form.desktop input {
+          margin-bottom: 10px;
+          outline: none;
+          width: 250px; }
+        .content .bg-img form.desktop textarea {
+          outline: none;
+          width: 250px; }
+    .content form.mobile {
+      display: none; }
+  .team ul {
+    list-style: none;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-left: 10%; }
+    .team ul li {
+      float: left; }
+      .team ul li img {
+        display: block;
+        width: 100px;
+        height: 100px;
+        margin: 15px; }
+      .team ul li span {
+        color: #a11526;
+        width: 10px; } }
+
+@media screen and (min-width: 992px) and (max-width: 1900px) {
+  .content {
+    width: 100%; }
+    .content .bg-img {
+      background-image: url("img/page_contact.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 600px; }
+      .content .bg-img form.desktop {
+        text-align: center;
+        top: 60%;
+        left: 35%;
+        width: 300px;
+        position: absolute; }
+        .content .bg-img form.desktop h2 {
+          font-weight: 400;
+          margin-bottom: 20px;
+          text-align: center; }
+        .content .bg-img form.desktop input {
+          margin-bottom: 10px;
+          outline: none;
+          width: 400px;
+          height: 50px; }
+        .content .bg-img form.desktop textarea {
+          outline: none;
+          width: 400px;
+          height: 80px; }
+    .content form.mobile {
+      display: none; }
+  .team ul {
+    list-style: none;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-left: 3%; }
+    .team ul li {
+      float: left; }
+      .team ul li img {
+        display: block;
+        width: 200px;
+        height: 200px;
+        margin: 15px; }
+      .team ul li span {
+        color: #a11526;
+        width: 10px;
+        font-size: 20px; } }
+
+html {
+  margin: 0px !important; }
+
+=======
+>>>>>>> origin/master
+body {
+  font-family: "Montserrat";
+  font-size: 15px;
+  color: black;
+  font-weight: 400; }
+
+<<<<<<< HEAD
+h2 {
+  margin: 0px;
+  line-height: 100%; }
+
+div.headerCategory {
+  background-size: cover;
+  width: 100%; }
+  div.headerCategory .headerPic {
+    background: url("http://lorempixel.com/1920/300");
+    height: 300px; }
+  div.headerCategory .navbarCategory {
+    font-family: "Montserrat";
+    font-size: 18px;
+    height: 60px;
+    background: #f4f4f4;
+    padding: 0px;
+    color: #a11526;
+    -webkit-box-shadow: 0px -20px 80px 12px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0px -20px 80px 12px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px -20px 80px 12px rgba(0, 0, 0, 0.35); }
+    div.headerCategory .navbarCategory h2 {
+      line-height: 60px;
+      text-transform: uppercase; }
+      @media screen and (max-width: 768px) {
+        div.headerCategory .navbarCategory h2 {
+          font-size: 15px; } }
+
+section.eventsList article.eventItem {
+  background: #eeeeee;
+  margin-top: 40px;
+  padding: 0px; }
+  section.eventsList article.eventItem .eventThumbnail {
+    width: auto;
+    height: 200px;
+    background: url("http://lorempixel.com/500/500");
+    background-size: cover; }
+  section.eventsList article.eventItem .eventContent {
+    padding: 0 20px; }
+    section.eventsList article.eventItem .eventContent .eventTitle {
+      font-size: 15px;
+      color: #a11526;
+      font-family: "Montserrat";
+      font-weight: 400;
+      text-transform: uppercase; }
+    section.eventsList article.eventItem .eventContent .eventDescri {
+      font-family: "Montserrat"; }
+    section.eventsList article.eventItem .eventContent aside.eventInfo {
+      width: 100%;
+      height: 40px;
+      background: #2f2f2f; }
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  footer {
+    display: none; } }
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  footer {
+    display: none; } }
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  footer {
+    width: 100%;
+    height: 70px;
+    color: white;
+    background-color: #000;
+    font-size: 18px;
+    font-family: 'Montserrat'; } }
+
+=======
+>>>>>>> origin/master
 /* MOBILE */
 /* HOME */
 @media screen and (min-width: 0px) and (max-width: 768px) {
   /* NavBar - Menu */
   nav {
-    background-color: #f3f3f3; }
+    background-color: #eeeeee; }
     nav #hamb {
       position: absolute;
       top: 0;
@@ -2145,7 +2399,7 @@ select[multiple].input-lg {
     background-image: url("http://pipsum.com/200x200.jpg");
     height: 200px; }
   .contenu_home section.recetteduj {
-    background-color: #f3f3f3;
+    background-color: #eeeeee;
     border-radius: 10px; }
     .contenu_home section.recetteduj h2 {
       padding: 10px;
@@ -2159,13 +2413,13 @@ select[multiple].input-lg {
       margin-bottom: 0;
       background-color: #2f2f2f; }
       .contenu_home section.recetteduj .lireplus p {
-        color: white;
+        color: #f4f4f4;
         text-decoration: none; }
   .contenu_home section.plusconsulte {
-    background-color: #f3f3f3;
+    background-color: #eeeeee;
     border-radius: 10px; }
     .contenu_home section.plusconsulte h2 {
-      color: white;
+      color: #f4f4f4;
       text-align: center;
       text-transform: uppercase;
       font-size: 18px;
@@ -2176,7 +2430,7 @@ select[multiple].input-lg {
       background-color: #a11526; }
     .contenu_home section.plusconsulte article {
       padding-top: 10px;
-      background-color: white; }
+      background-color: #f4f4f4; }
       .contenu_home section.plusconsulte article img {
         float: left; }
       .contenu_home section.plusconsulte article h3 {
@@ -2200,7 +2454,7 @@ select[multiple].input-lg {
 @media screen and (min-width: 768px) and (max-width: 992px) {
   /* NavBar - Menu */
   nav {
-    background-color: #f3f3f3; }
+    background-color: #eeeeee; }
     nav #hamb {
       position: absolute;
       top: 0;
@@ -2211,24 +2465,43 @@ select[multiple].input-lg {
       height: 100px;
       margin: auto;
       margin-top: 35%; }
+    nav .icon-bar {
+      background-color: black;
+      display: block;
+      width: 100%;
+      height: 20%;
+      transition: 0.20s;
+      -webkit-transition: 0.0s;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+    nav .animate .icon-bar:nth-child(1) {
+      transform: translateY(7px) rotate(135deg); }
+    nav .animate .icon-bar:nth-child(2) {
+      opacity: 0; }
+    nav .animate .icon-bar:nth-child(3) {
+      transform: translateY(-5px) rotate(-135deg); }
+    nav .navbar-nav ul {
+      padding-left: 0; }
+    nav .navbar-nav ul li.page_item {
+      display: block;
+      text-decoration: none;
+      font-size: 18px;
+      text-align: center;
+      margin-top: 10px; }
+      nav .navbar-nav ul li.page_item a {
+        text-decoration: none;
+        color: black;
+        display: block; }
+      nav .navbar-nav ul li.page_item:hover {
+        background-color: white; }
+    nav #formSearchNavBar {
+      text-align: center; }
   .navbar {
     margin-bottom: 0px; }
   .navbar-brand {
     color: black; }
-  .navbar-nav ul li.page_item {
-    display: block;
-    float: left;
-    text-decoration: none;
-    font-size: 18px;
-    margin-right: 10px; }
-    .navbar-nav ul li.page_item a {
-      text-decoration: none;
-      color: black;
-      display: block; }
-      .navbar-nav ul li.page_item a:hover {
-        color: blue; }
-  #formSearchNavBar {
-    float: right; }
   section.slider {
     background-image: url("http://pipsum.com/435x400.jpg");
     width: 100%;
