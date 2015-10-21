@@ -15,10 +15,20 @@ $font : 'Montserrat';
 /* MEDIA WIDTHS */
 
 $mobile:768px;
-$desktop-min:1080px;
+$desktop-min:992px;
 $desktop-max:1280px;
 
-
+/* DECORATION */
+@mixin gradient() {
+    background: #373737; /* Old browsers */
+    background: -moz-linear-gradient(left,  #373737 0%, #565656 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#373737), color-stop(100%,#565656)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #373737 0%,#565656 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #373737 0%,#565656 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #373737 0%,#565656 100%); /* IE10+ */
+    background: linear-gradient(to right,  #373737 0%,#565656 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#373737', endColorstr='#565656',GradientType=1 ); /* IE6-9 */
+}
 /* TOOLS */
 
 .clear { clear: both; }
