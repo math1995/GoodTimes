@@ -72,6 +72,23 @@ section.eventsList article.eventItem {
       height: 40px;
       background: #2f2f2f; }
 
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  footer {
+    display: none; } }
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  footer {
+    display: none; } }
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  footer {
+    width: 100%;
+    height: 70px;
+    color: white;
+    background-color: #000;
+    font-size: 18px;
+    font-family: 'Montserrat'; } }
+
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -2095,32 +2112,6 @@ select[multiple].input-lg {
   .hidden-print {
     display: none !important; } }
 
-<<<<<<< HEAD
-=======
-/* Colors */
-/* Fonts size */
-/* TOOLS */
-.clear {
-  clear: both; }
-
-@media screen and (min-width: 0px) and (max-width: 768px) {
-  footer {
-    display: none; } }
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  footer {
-    display: none; } }
-
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  footer {
-    width: 100%;
-    height: 70px;
-    color: white;
-    background-color: #000;
-    font-size: 18px;
-    font-family: 'Montserrat'; } }
-
->>>>>>> 5f060f4e2f9b768d4dd39fe8696efedf5c4cd6fd
 /* MOBILE */
 @media screen and (min-width: 0px) and (max-width: 768px) {
   /* NavBar - Menu */
