@@ -4,11 +4,6 @@
 	Theme URI: http://google.fr
 	Author: Eden, Noémie, Benjamin, Mathieu, Rémi.
 */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 72ab2194494c1ed289c1dd3ed8fe3384c5b2f314
 /* Colors */
 /* Fonts size */
 /* MEDIA WIDTHS */
@@ -95,10 +90,6 @@ section.eventsList article.eventItem {
     text-align: center;
     font-family: 'Montserrat'; } }
 
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> 72ab2194494c1ed289c1dd3ed8fe3384c5b2f314
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 html {
@@ -2123,21 +2114,17 @@ select[multiple].input-lg {
   .hidden-print {
     display: none !important; } }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 /* Colors */
 /* Fonts size */
 /* MEDIA WIDTHS */
 /* TOOLS */
 .clear {
   clear: both; }
-=======
 body {
   font-family: "Montserrat";
   font-size: 15px;
   color: black;
   font-weight: 400; }
->>>>>>> 72ab2194494c1ed289c1dd3ed8fe3384c5b2f314
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
   section.content {
