@@ -4,15 +4,37 @@
 	Author: Eden, Noémie, Benjamin, Mathieu, Rémi.
 */
 
+
+@import "libs/bootstrap.scss";
 @import "_variable.scss";
+@import "_noemie";
 @import "_ben.scss";
 @import "style-math.scss";
-@import "libs/bootstrap.scss";
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 /* MOBILE */
+/* HOME */ 
 
+@import "libs/bootstrap";
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+@import "_variable.scss";
+@import "_ben.scss";
+@import "style-math.scss";
+@import "libs/bootstrap";
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body{
+    font-family: $font;
+    font-size:$title-size2;
+    color:black;
+    font-weight:400;
+}
+/* MOBILE */
 @media screen and (min-width: 0px) and (max-width: 768px) {
 	/* NavBar - Menu */
 	nav {
@@ -208,6 +230,7 @@
 			}
 		}
 	}
+      
 }
 
 /* TABLET */
@@ -283,6 +306,15 @@
 			#formSearchNavBar {
 				text-align: center;
 			}
+	}
+
+	.navbar {
+		margin-bottom: 0px;
+	}
+
+	.navbar-brand {
+	   	color: $black;
+	}
 
 	}
 
@@ -294,15 +326,19 @@
 	   	color: $black;
 	}
 
-
 	section.slider {
 		background-image: url("http://pipsum.com/435x400.jpg");
 		width: 100%;
 		height: 300px;
 	}
+  
 }
 
-/* DESTOCK */
+
+
+/**********************/ 
+
+/* DESKTOP */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
 	section.slider {
 		background-image: url("http://pipsum.com/435x400.jpg");
