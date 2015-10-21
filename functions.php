@@ -212,9 +212,9 @@ if($_POST) {
 	}
 }
 
-function my_getRecipee_info($my_date, $duration) {
-	$my_date = get_the_date();
-	$duration = get_taxonomy('duree')
-}
+// function my_getRecipee_info($my_date, $duration) {
+// 	$my_date = get_the_date();
+// 	$duration = get_taxonomy('duree')
+// }
 
 apply_filters( 'get_the_date', $the_date, $format );
