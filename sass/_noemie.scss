@@ -41,20 +41,21 @@
         ul{
             list-style: none;
             width:100%;
+            height:auto;
             text-align:center;
-            
+            margin-left:30px;
+           
         }
          ul li img{ 
             display:block;
-             float:left;
-            }
-        img{ 
-            
+            float:left;
             width:130px;
             height:130px;
             position:relative;
             margin: 15px;
         }
+      
+       
     }
 
 }
