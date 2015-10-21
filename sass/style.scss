@@ -3,9 +3,13 @@
 	Theme URI: http://google.fr
 	Author: Eden, Noémie, Benjamin, Mathieu, Rémi.
 */
-@import "libs/bootstrap.scss";
-@import "_variable.scss";
 
+@import "_variable.scss";
+@import "_ben.scss";
+@import "style-math.scss";
+@import "libs/bootstrap.scss";
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 /* MOBILE */
 

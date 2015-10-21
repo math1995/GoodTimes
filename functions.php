@@ -219,3 +219,9 @@ if($_POST) {
 
 apply_filters( 'get_the_date', $the_date, $format );
 
+function action_function_name( $args ) {
+
+	echo '<input type="hidden" name="_my_hidden_input" value="TEST_IF_THIS_EXISTS_IN_SAVE_POST"';
+
+}
+add_action( 'acf/input/form_data', 'action_function_name', 10, 1 );
