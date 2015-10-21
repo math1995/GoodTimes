@@ -52,8 +52,8 @@ function custom_post_type() {
 
 	//  Catégories de sortie
 	register_taxonomy(
-		'categorie', 
-		'categorie',
+		'type', 
+		'projet',
 		array(
 			'label' => 'Catégorie de sortie',
 			'labels' => array(
