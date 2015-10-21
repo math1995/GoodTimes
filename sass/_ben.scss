@@ -1,0 +1,84 @@
+html{
+    margin:0px !important;
+}
+
+body{
+    font-family: $font;
+    font-size:$title-size2;
+    color:black;
+    font-weight:400;
+}
+
+h2{
+    margin:0px;
+    line-height:100%;
+}
+
+div.headerCategory{
+    
+    background-size:cover;
+    width:100%;
+
+    .headerPic{
+        background: url("http://lorempixel.com/1920/300");
+        height:300px;
+
+    }
+
+    .navbarCategory{
+        font-family:$font;
+        font-size:$title-size1;
+        height:60px;
+        background: $white;
+        padding:0px;
+        color:$red;
+
+        -webkit-box-shadow: 0px -20px 80px 12px rgba(0,0,0,0.35);
+        -moz-box-shadow: 0px -20px 80px 12px rgba(0,0,0,0.35);
+        box-shadow: 0px -20px 80px 12px rgba(0,0,0,0.35);
+            
+        h2{
+            line-height: 60px;
+            text-transform: uppercase;
+
+            @media screen and (max-width:$mobile){
+                font-size:$title-size2;
+            }
+        }
+    }
+}
+
+section.eventsList{
+    article.eventItem{
+        background: $gray;
+        margin-top: 40px;
+        padding:0px;
+
+        .eventThumbnail{
+            width:auto;
+            height:200px;
+            background:url('http://lorempixel.com/500/500');
+            background-size:cover;
+        }  
+        .eventContent{
+            padding:0 20px;
+            .eventTitle{
+                font-size:$title-size2;
+                color:$red;
+                font-family:$font;
+                font-weight:400;
+                text-transform: uppercase;
+            }
+
+            .eventDescri{
+                font-family:$font;
+            }
+
+            aside.eventInfo{
+                width:100%;
+                height:40px;
+                background: $gray-dark;
+            }
+        }
+    }
+}
