@@ -208,6 +208,7 @@
 
 /* TABLET */
 @media screen and (min-width: 768px) and (max-width: 992px) {
+	
 	/* NavBar - Menu */
 	nav {
 
@@ -225,6 +226,60 @@
 				margin-top:35%;
 
 			}	
+
+			.icon-bar {
+				background-color: $black;
+				display: block;
+				width:100%;
+				height:20%;
+				transition:0.20s;
+				-webkit-transition:0.0s;  
+				-webkit-user-select: none;
+				-moz-user-select: none;    
+				-ms-user-select: none;      
+				user-select: none; 
+			}
+
+
+			.animate .icon-bar:nth-child(1) {
+			    transform:translateY(7px) rotate(135deg);
+			}
+
+			.animate .icon-bar:nth-child(2) {
+			    opacity: 0;
+			}
+
+			.animate .icon-bar:nth-child(3) {
+			    transform:translateY(-5px) rotate(-135deg);
+			}
+
+			.navbar-nav ul {
+				padding-left: 0;
+			}
+
+			.navbar-nav ul li.page_item {
+			    display: block;
+			    text-decoration: none;
+				font-size: 18px;
+				text-align: center;
+				margin-top: 10px;
+
+				a {
+					text-decoration: none;
+				 	color: $black;
+				  	display: block;
+				}
+				
+				&:hover {
+					background-color: white;
+				}
+
+			}
+
+			#formSearchNavBar {
+				text-align: center;
+			}
+
 	}
 
 	.navbar {
@@ -235,27 +290,6 @@
 	   	color: $black;
 	}
 
-	.navbar-nav ul li.page_item {
-			    display: block;
-			    float: left;
-			    text-decoration: none;
-				font-size: 18px;
-				margin-right: 10px;
-
-				a {
-					text-decoration: none;
-				 	color: $black;
-				  	display: block;
-					
-					&:hover {
-						color: blue;
-					}
-				}
-	}
-
-	#formSearchNavBar {
-		float: right;
-	}
 
 	section.slider {
 		background-image: url("http://pipsum.com/435x400.jpg");
