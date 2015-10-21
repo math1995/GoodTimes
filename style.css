@@ -7,6 +7,7 @@
 /* Colors */
 /* Fonts size */
 /* MEDIA WIDTHS */
+/* DECORATION */
 /* TOOLS */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 .clear {
@@ -48,29 +49,145 @@ div.headerCategory {
         div.headerCategory .navbarCategory h2 {
           font-size: 15px; } }
 
-section.eventsList article.eventItem {
-  background: #eeeeee;
-  margin-top: 40px;
+section.eventsList {
+  margin-top: 40px; }
+  section.eventsList article.eventItem {
+    background: #eeeeee;
+    padding: 0px; }
+    @media screen and (min-width: 992px) {
+      section.eventsList article.eventItem {
+        border-radius: 0px 5px 5px 0px; } }
+    section.eventsList article.eventItem .eventThumbnail {
+      height: 182px;
+      background: url("http://lorempixel.com/500/500");
+      background-size: cover;
+      border-radius: 5px 5px 0 0; }
+      @media screen and (max-width: 992px) {
+        section.eventsList article.eventItem .eventThumbnail {
+          margin-bottom: 20px; } }
+      @media screen and (min-width: 992px) {
+        section.eventsList article.eventItem .eventThumbnail {
+          margin-right: 20px;
+          border-radius: 0; } }
+    section.eventsList article.eventItem .eventContent {
+      padding: 0 20px;
+      margin-bottom: 15px; }
+      section.eventsList article.eventItem .eventContent .eventTitle {
+        font-size: 15px;
+        color: #a11526;
+        font-family: "Montserrat";
+        font-weight: 400;
+        text-transform: uppercase; }
+      section.eventsList article.eventItem .eventContent .eventDescri {
+        font-family: "Montserrat"; }
+    section.eventsList article.eventItem aside.eventInfos {
+      width: 100%;
+      background: #373737;
+      /* Old browsers */
+      background: -moz-linear-gradient(left, #373737 0%, #565656 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, right top, color-stop(0%, #373737), color-stop(100%, #565656));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(left, #373737 0%, #565656 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(left, #373737 0%, #565656 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(left, #373737 0%, #565656 100%);
+      /* IE10+ */
+      background: linear-gradient(to right, #373737 0%, #565656 100%);
+      /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#373737', endColorstr='#565656',GradientType=1 );
+      /* IE6-9 */
+      line-height: 40px;
+      padding: 0 20px;
+      border-radius: 0 0 5px 5px; }
+      section.eventsList article.eventItem aside.eventInfos .eventLength, section.eventsList article.eventItem aside.eventInfos .eventDate, section.eventsList article.eventItem aside.eventInfos .separator {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #eeeeee; }
+      section.eventsList article.eventItem aside.eventInfos .readMore {
+        float: right;
+        font-family: "Montserrat";
+        font-size: 15px;
+        color: #eeeeee;
+        text-decoration: underline; }
+        section.eventsList article.eventItem aside.eventInfos .readMore:hover {
+          text-decoration: none; }
+
+section.sidebar {
   padding: 0px; }
-  section.eventsList article.eventItem .eventThumbnail {
-    width: auto;
-    height: 200px;
-    background: url("http://lorempixel.com/500/500");
-    background-size: cover; }
-  section.eventsList article.eventItem .eventContent {
-    padding: 0 20px; }
-    section.eventsList article.eventItem .eventContent .eventTitle {
-      font-size: 15px;
+  @media screen and (min-width: 992px) {
+    section.sidebar {
+      padding: 0px 10px; } }
+  @media screen and (max-width: 992px) {
+    section.sidebar {
+      margin-top: 20px; } }
+  section.sidebar .searchbar {
+    height: 50px;
+    background: #eeeeee;
+    padding: 10px;
+    border-radius: 5px 5px 0px 0px; }
+    section.sidebar .searchbar input.searchbarContent {
+      height: 30px;
+      width: 100%;
+      outline: none;
+      background: white;
+      border: solid 2px #b7b7b7;
+      padding: 0px 5px;
+      position: relative; }
+    section.sidebar .searchbar input::-webkit-input-placeholder, section.sidebar .searchbar textarea::-webkit-input-placeholder {
       color: #a11526;
+      text-align: right; }
+    section.sidebar .searchbar input:-moz-placeholder, section.sidebar .searchbar textarea:-moz-placeholder {
+      color: #a11526;
+      text-align: right; }
+    section.sidebar .searchbar input::-moz-placeholder, section.sidebar .searchbar textarea::-moz-placeholder {
+      color: #a11526;
+      text-align: right; }
+    section.sidebar .searchbar input:-ms-input-placeholder, section.sidebar .searchbar textarea:-ms-input-placeholder {
+      color: #a11526;
+      text-align: right; }
+  section.sidebar .categoriesContent {
+    background: #eeeeee;
+    border-radius: 0 0 5px 5px;
+    margin: 10px 0px; }
+    section.sidebar .categoriesContent h3 {
+      background: #373737;
+      /* Old browsers */
+      background: -moz-linear-gradient(left, #373737 0%, #565656 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, right top, color-stop(0%, #373737), color-stop(100%, #565656));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(left, #373737 0%, #565656 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(left, #373737 0%, #565656 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(left, #373737 0%, #565656 100%);
+      /* IE10+ */
+      background: linear-gradient(to right, #373737 0%, #565656 100%);
+      /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#373737', endColorstr='#565656',GradientType=1 );
+      /* IE6-9 */
       font-family: "Montserrat";
       font-weight: 400;
-      text-transform: uppercase; }
-    section.eventsList article.eventItem .eventContent .eventDescri {
-      font-family: "Montserrat"; }
-    section.eventsList article.eventItem .eventContent aside.eventInfo {
+      text-transform: uppercase;
+      font-size: 15px;
       width: 100%;
-      height: 40px;
-      background: #2f2f2f; }
+      height: 45px;
+      margin: 0;
+      color: #f4f4f4;
+      line-height: 45px;
+      padding: 0px 10px; }
+    section.sidebar .categoriesContent .categoriesList {
+      padding: 10px 15px;
+      margin: 0;
+      list-style: none;
+      font-family: "Montserrat"; }
+      section.sidebar .categoriesContent .categoriesList li {
+        height: 25px;
+        line-height: 25px; }
+        section.sidebar .categoriesContent .categoriesList li a {
+          color: black; }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
   footer {
@@ -2251,24 +2368,43 @@ select[multiple].input-lg {
       height: 100px;
       margin: auto;
       margin-top: 35%; }
+    nav .icon-bar {
+      background-color: black;
+      display: block;
+      width: 100%;
+      height: 20%;
+      transition: 0.20s;
+      -webkit-transition: 0.0s;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+    nav .animate .icon-bar:nth-child(1) {
+      transform: translateY(7px) rotate(135deg); }
+    nav .animate .icon-bar:nth-child(2) {
+      opacity: 0; }
+    nav .animate .icon-bar:nth-child(3) {
+      transform: translateY(-5px) rotate(-135deg); }
+    nav .navbar-nav ul {
+      padding-left: 0; }
+    nav .navbar-nav ul li.page_item {
+      display: block;
+      text-decoration: none;
+      font-size: 18px;
+      text-align: center;
+      margin-top: 10px; }
+      nav .navbar-nav ul li.page_item a {
+        text-decoration: none;
+        color: black;
+        display: block; }
+      nav .navbar-nav ul li.page_item:hover {
+        background-color: white; }
+    nav #formSearchNavBar {
+      text-align: center; }
   .navbar {
     margin-bottom: 0px; }
   .navbar-brand {
     color: black; }
-  .navbar-nav ul li.page_item {
-    display: block;
-    float: left;
-    text-decoration: none;
-    font-size: 18px;
-    margin-right: 10px; }
-    .navbar-nav ul li.page_item a {
-      text-decoration: none;
-      color: black;
-      display: block; }
-      .navbar-nav ul li.page_item a:hover {
-        color: blue; }
-  #formSearchNavBar {
-    float: right; }
   section.slider {
     background-image: url("http://pipsum.com/435x400.jpg");
     width: 100%;
