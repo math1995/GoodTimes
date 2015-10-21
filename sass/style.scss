@@ -127,54 +127,63 @@
 		}
 	}
 
-	article.recetteduj {
-		background-color: $gray;
-		border-radius: 30px;
-		
-		h2 {
-			padding: 10px;
-			color: $red;
-			text-align: center;
-			text-transform: uppercase;
-		}
-		p {
-			padding: 10px;
-			text-align: justify;	
-		}
 
-		.lireplus {
-			margin-bottom: 0;
-			background-color: $gray-dark;
+	.contenu_home {
+		section.recetteduj {
+			background-color: $gray;
+			border-radius: 10px;
 			
+			h2 {
+				padding: 10px;
+				color: $red;
+				text-align: center;
+				text-transform: uppercase;
+			}
 			p {
-				color: $white;
-				text-decoration: none;
+				padding: 10px;
+				text-align: justify;	
+			}
+
+			.lireplus {
+				margin-bottom: 0;
+				background-color: $gray-dark;
+				
+				p {
+					color: $white;
+					text-decoration: none;
+				}
 			}
 		}
-	}
 
-	article.plusconsulte {
-		background-color: $gray;
-		border-radius: 30px;
-		
-		h2 {
-			padding: 10px;
-			color: $red;
-			text-align: center;
-			text-transform: uppercase;
-		}
-		p {
-			padding: 10px;
-			text-align: justify;	
-		}
-
-		.lireplus {
-			margin-bottom: 0;
-			background-color: $gray-dark;
+		section.plusconsulte {
+			background-color: $gray;
+			border-radius: 10px;
 			
-			p {
+			h2 {
+				padding: 10px;
 				color: $white;
-				text-decoration: none;
+				text-align: center;
+				text-transform: uppercase;
+				font-size: 13px;
+				background-color: $gray-dark;
+			}
+
+
+			article {
+				background-color: $white;
+
+				h3 {
+					padding: 10px;
+					color: $white;
+					text-align: center;
+					text-transform: uppercase;
+					font-size: 13px;
+				}
+
+				p {
+					padding: 10px;
+					text-align: justify;	
+				}
 			}
 		}
 	}

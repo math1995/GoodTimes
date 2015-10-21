@@ -2099,40 +2099,44 @@ select[multiple].input-lg {
   section.moment article.soiree {
     background-image: url("http://pipsum.com/200x200.jpg");
     height: 200px; }
-  article.recetteduj {
+  .contenu_home section.recetteduj {
     background-color: #f3f3f3;
-    border-radius: 30px; }
-    article.recetteduj h2 {
+    border-radius: 10px; }
+    .contenu_home section.recetteduj h2 {
       padding: 10px;
       color: #a11526;
       text-align: center;
       text-transform: uppercase; }
-    article.recetteduj p {
+    .contenu_home section.recetteduj p {
       padding: 10px;
       text-align: justify; }
-    article.recetteduj .lireplus {
+    .contenu_home section.recetteduj .lireplus {
       margin-bottom: 0;
       background-color: #2f2f2f; }
-      article.recetteduj .lireplus p {
+      .contenu_home section.recetteduj .lireplus p {
         color: white;
         text-decoration: none; }
-  article.plusconsulte {
+  .contenu_home section.plusconsulte {
     background-color: #f3f3f3;
-    border-radius: 30px; }
-    article.plusconsulte h2 {
+    border-radius: 10px; }
+    .contenu_home section.plusconsulte h2 {
       padding: 10px;
-      color: #a11526;
+      color: white;
       text-align: center;
-      text-transform: uppercase; }
-    article.plusconsulte p {
-      padding: 10px;
-      text-align: justify; }
-    article.plusconsulte .lireplus {
-      margin-bottom: 0;
+      text-transform: uppercase;
+      font-size: 13px;
       background-color: #2f2f2f; }
-      article.plusconsulte .lireplus p {
+    .contenu_home section.plusconsulte article {
+      background-color: white; }
+      .contenu_home section.plusconsulte article h3 {
+        padding: 10px;
         color: white;
-        text-decoration: none; } }
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 13px; }
+      .contenu_home section.plusconsulte article p {
+        padding: 10px;
+        text-align: justify; } }
 
 /* TABLET */
 @media screen and (min-width: 768px) and (max-width: 992px) {
