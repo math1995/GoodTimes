@@ -4,6 +4,7 @@
  	
 
 <<<<<<< HEAD
+<<<<<<< HEAD
  <section class="content">
            <div class="bg-img"> 
                 <form method = "POST" class="desktop">
@@ -42,3 +43,7 @@
 <?php get_footer() ?>
 ?>
 >>>>>>> origin/master
+=======
+<?php get_footer() ?>
+?>
+>>>>>>> 72ab2194494c1ed289c1dd3ed8fe3384c5b2f314

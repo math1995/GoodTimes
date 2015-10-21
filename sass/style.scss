@@ -4,6 +4,7 @@
 	Author: Eden, Noémie, Benjamin, Mathieu, Rémi.
 */
 
+<<<<<<< HEAD
 @import "libs/bootstrap.scss";
 @import "_variable.scss";
 @import "_noemie";
@@ -19,13 +20,25 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
+=======
+@import "_variable.scss";
+@import "_ben.scss";
+@import "style-math.scss";
+@import "libs/bootstrap";
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+>>>>>>> 72ab2194494c1ed289c1dd3ed8fe3384c5b2f314
 body{
     font-family: $font;
     font-size:$title-size2;
     color:black;
     font-weight:400;
 }
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 72ab2194494c1ed289c1dd3ed8fe3384c5b2f314
 
 /* MOBILE */
 @media screen and (min-width: 0px) and (max-width: 768px) {
@@ -300,6 +313,7 @@ body{
 				text-align: center;
 			}
 
+<<<<<<< HEAD
 	}
 
 	.navbar {
@@ -310,6 +324,18 @@ body{
 	   	color: $black;
 	}
 
+=======
+	}
+
+	.navbar {
+		margin-bottom: 0px;
+	}
+
+	.navbar-brand {
+	   	color: $black;
+	}
+
+>>>>>>> 72ab2194494c1ed289c1dd3ed8fe3384c5b2f314
 
 	section.slider {
 		background-image: url("http://pipsum.com/435x400.jpg");
