@@ -9,8 +9,6 @@
     <!-- CSS -->
     <link href="<?php echo get_template_directory_uri() ?>/style.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-    <?php wp_head(); ?>
   </head>
   
   <header>   

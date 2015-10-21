@@ -2,6 +2,10 @@
 
 <?php get_header(); ?>
 
-<p><?php the_field('nom_&_prenom'); ?></p>
-<p><?php the_field('email'); ?></p>
-<textarea><?php the_field('ecrire_un_message'); ?></textarea>
+<?php
+if(get_field('nom_&_prenom'))
+{
+	echo '<input(href="test.php" placeholder="Rentrez votre Nom et votre Prénom)>'. get_field('nom_&_prenom') . '</input>';
+}
+
+?>

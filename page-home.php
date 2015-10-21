@@ -1,8 +1,6 @@
 <?php /* Template Name: page-home.php */ ?> 
 
-<?php get_header(); ?> 
-
-<section class="slider"></section>
+<?php get_header(); ?>
 
 <section class="moment">
 		<article class="matinee">
