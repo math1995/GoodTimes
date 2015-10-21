@@ -2099,21 +2099,38 @@ select[multiple].input-lg {
   section.moment article.soiree {
     background-image: url("http://pipsum.com/200x200.jpg");
     height: 200px; }
-  section.recetteduj {
+  article.recetteduj {
     background-color: #f3f3f3;
-    border-radius: 10px; }
-    section.recetteduj h2 {
+    border-radius: 30px; }
+    article.recetteduj h2 {
       padding: 10px;
       color: #a11526;
       text-align: center;
       text-transform: uppercase; }
-    section.recetteduj p {
+    article.recetteduj p {
       padding: 10px;
       text-align: justify; }
-    section.recetteduj .lireplus {
+    article.recetteduj .lireplus {
       margin-bottom: 0;
       background-color: #2f2f2f; }
-      section.recetteduj .lireplus p {
+      article.recetteduj .lireplus p {
+        color: white;
+        text-decoration: none; }
+  article.plusconsulte {
+    background-color: #f3f3f3;
+    border-radius: 30px; }
+    article.plusconsulte h2 {
+      padding: 10px;
+      color: #a11526;
+      text-align: center;
+      text-transform: uppercase; }
+    article.plusconsulte p {
+      padding: 10px;
+      text-align: justify; }
+    article.plusconsulte .lireplus {
+      margin-bottom: 0;
+      background-color: #2f2f2f; }
+      article.plusconsulte .lireplus p {
         color: white;
         text-decoration: none; } }
 

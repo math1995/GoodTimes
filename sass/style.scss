@@ -127,9 +127,35 @@
 		}
 	}
 
-	section.recetteduj {
+	article.recetteduj {
 		background-color: $gray;
-		border-radius: 10px;
+		border-radius: 30px;
+		
+		h2 {
+			padding: 10px;
+			color: $red;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		p {
+			padding: 10px;
+			text-align: justify;	
+		}
+
+		.lireplus {
+			margin-bottom: 0;
+			background-color: $gray-dark;
+			
+			p {
+				color: $white;
+				text-decoration: none;
+			}
+		}
+	}
+
+	article.plusconsulte {
+		background-color: $gray;
+		border-radius: 30px;
 		
 		h2 {
 			padding: 10px;
