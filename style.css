@@ -2029,11 +2029,41 @@ select[multiple].input-lg {
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
   .container {
-    background-image: url("img/Page_contact.jpeg");
+    background-color: grey;
     width: 100%;
-    height: auto; } }
+    height: auto; }
+  .team img {
+    width: 300px;
+    height: 300px;
+    list-style: none;
+    position: relative; } }
 
 /* TABLET */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .container {
+    width: 100%;
+    height: 600px; }
+    .container .bg-img {
+      background-image: url("img/page_contact.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100%; }
+  .team {
+    width: 980px; }
+    .team ul {
+      list-style: none;
+      width: 100%;
+      text-align: center; }
+    .team ul li img {
+      display: block;
+      float: left; }
+    .team img {
+      width: 130px;
+      height: 130px;
+      position: relative;
+      margin: 15px; } }
+
 /* MOBILE */
 /* HOME */
 @media screen and (min-width: 0px) and (max-width: 768px) {

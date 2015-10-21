@@ -12,6 +12,17 @@
             </form>
         
 </section>
+<section class="team">
+        <ul>
+            <li><img src="http://lorempixel.com/150/150"></li>
+<!--            <li><img src="<?php echo get_template_directory_uri() ?>/img/benjamin.png"></li>-->
+             <li><img src="http://lorempixel.com/150/150"></li>
+             <li><img src="http://lorempixel.com/150/150"></li>
+             <li><img src="http://lorempixel.com/150/150"></li>
+             <li><img src="http://lorempixel.com/150/150"></li>
+        </ul>
+
+</section>
 
 <?php get_footer(); ?>
 
