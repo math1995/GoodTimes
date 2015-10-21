@@ -37,6 +37,4 @@
       </nav>
   </header>
 
-  <div class="container content">
-    <div class="row">
     
