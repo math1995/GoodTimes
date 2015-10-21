@@ -217,4 +217,4 @@ if($_POST) {
 // 	$duration = get_taxonomy('duree')
 // }
 
-apply_filters( 'get_the_date', $the_date, $format );
+// apply_filters( 'get_the_date', $the_date, $format );
