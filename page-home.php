@@ -37,7 +37,18 @@
 		<section class="plusconsulte">
 			<h2>Les plus consultés</h2>
 			<article>
-				<h3>Titre</h2>
+				<img src="http://pipsum.com/80x80.jpg"/>
+				<h3>Titre</h3>
+				<div class="clear">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas orci ante, porta quis mollis a, efficitur
+					non risus. Nulla interdum leo at massa cursus, sed eleifend sapien mollis. 
+				</p>
+			</article>
+			<article class="change">
+				<img src="http://pipsum.com/80x80.jpg"/>
+				<h3>Titre</h3>
+				<div class="clear">
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas orci ante, porta quis mollis a, efficitur
 					non risus. Nulla interdum leo at massa cursus, sed eleifend sapien mollis. 
