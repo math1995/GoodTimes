@@ -6,8 +6,10 @@
 	</div>
 
 	<footer>
-		<p style="color:white"><?php strtoupper(bloginfo('name')) ?></p>
-		<p> Réalisé par <?php bloginfo('description')?></p>
+		<div>
+		<?php strtoupper(bloginfo('name')) ?><br>
+		Réalisé par la Bonne Équipe<br>
+		</div>
 	</footer>
 
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
