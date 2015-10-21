@@ -2112,6 +2112,12 @@ select[multiple].input-lg {
   .hidden-print {
     display: none !important; } }
 
+body {
+  font-family: "Montserrat";
+  font-size: 15px;
+  color: black;
+  font-weight: 400; }
+
 /* MOBILE */
 @media screen and (min-width: 0px) and (max-width: 768px) {
   /* NavBar - Menu */
@@ -2251,24 +2257,43 @@ select[multiple].input-lg {
       height: 100px;
       margin: auto;
       margin-top: 35%; }
+    nav .icon-bar {
+      background-color: black;
+      display: block;
+      width: 100%;
+      height: 20%;
+      transition: 0.20s;
+      -webkit-transition: 0.0s;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+    nav .animate .icon-bar:nth-child(1) {
+      transform: translateY(7px) rotate(135deg); }
+    nav .animate .icon-bar:nth-child(2) {
+      opacity: 0; }
+    nav .animate .icon-bar:nth-child(3) {
+      transform: translateY(-5px) rotate(-135deg); }
+    nav .navbar-nav ul {
+      padding-left: 0; }
+    nav .navbar-nav ul li.page_item {
+      display: block;
+      text-decoration: none;
+      font-size: 18px;
+      text-align: center;
+      margin-top: 10px; }
+      nav .navbar-nav ul li.page_item a {
+        text-decoration: none;
+        color: black;
+        display: block; }
+      nav .navbar-nav ul li.page_item:hover {
+        background-color: white; }
+    nav #formSearchNavBar {
+      text-align: center; }
   .navbar {
     margin-bottom: 0px; }
   .navbar-brand {
     color: black; }
-  .navbar-nav ul li.page_item {
-    display: block;
-    float: left;
-    text-decoration: none;
-    font-size: 18px;
-    margin-right: 10px; }
-    .navbar-nav ul li.page_item a {
-      text-decoration: none;
-      color: black;
-      display: block; }
-      .navbar-nav ul li.page_item a:hover {
-        color: blue; }
-  #formSearchNavBar {
-    float: right; }
   section.slider {
     background-image: url("http://pipsum.com/435x400.jpg");
     width: 100%;

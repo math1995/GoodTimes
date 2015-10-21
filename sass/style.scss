@@ -7,12 +7,18 @@
 @import "_variable.scss";
 @import "_ben.scss";
 @import "style-math.scss";
-@import "libs/bootstrap.scss";
+@import "libs/bootstrap";
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-/* MOBILE */
+body{
+    font-family: $font;
+    font-size:$title-size2;
+    color:black;
+    font-weight:400;
+}
 
+/* MOBILE */
 @media screen and (min-width: 0px) and (max-width: 768px) {
 	/* NavBar - Menu */
 	nav {
