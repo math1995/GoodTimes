@@ -23,26 +23,27 @@
             </div>
             <div class="singleEventContent">
                 <div class="singleEventThumbnail col-xs-12 col-md-3">
-                    <img src="http://lorempixel.com/200/200" alt="">
+                    <div class="bgimage"></div>
                 </div>
                 <div class="singleEventInfos col-xs-12 col-md-9">
                     <ul class="ingredients col-xs-6">
-                        <span>Ingrédients</span>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <span>Ingrédients :</span>
+                        <li>Lorem ipusm</li>
+                        <li>Lorem ipusm</li>
+                        <li>Lorem ipusm</li>
+                        <li>Lorem ipusm</li>
+                        <li>Lorem ipusm</li>
                     </ul>
                     <ul class="metadata col-xs-6">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li><span class="red">Postée le : </span>12/12/12</li>
+                        <li><span class="red">Préparation : </span>2h45</li>
+                        <li><span class="red">Durée: </span>3h45</li>
+                        <li><span class="red">Pour : </span>4 à 6 personnes</li>
                     </ul>
                 </div>
-                <p></p>
+                <div class="singleEventTxt col-xs-12">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, doloremque? Ea blanditiis pariatur ducimus laborum necessitatibus porro eveniet, totam temporibus placeat facilis, nostrum, saepe possimus accusantium eius aut repudiandae illum.</p>
+                </div>
             </div>   
         <div class="clear"></div>
         </section>
@@ -54,14 +55,14 @@
             </input>
         </div>
         <div class="categoriesContent">
-            <h3>Nos autres recettes</h3>
+            <h3>Recettes similaires</h3>
             <ul class="categoriesList">
-                <li class="categoriesItem"><a href="">Lorem ipsum catégorie</a></li>
-                <li class="categoriesItem"><a href="">Lorem ipsum catégorie</a></li>
-                <li class="categoriesItem"><a href="">Lorem ipsum catégorie</a></li>
-                <li class="categoriesItem"><a href="">Lorem ipsum catégorie</a></li>
-                <li class="categoriesItem"><a href="">Lorem ipsum catégorie</a></li>
-                <li class="categoriesItem"><a href="">Lorem ipsum catégorie</a></li>
+                <li class="categoriesItem"><img src="http://lorempixel.com/40/40"><a href="">Article similaire</a></li>
+                <li class="categoriesItem"><img src="http://lorempixel.com/40/40"><a href="">Article similaire</a></li>
+                <li class="categoriesItem"><img src="http://lorempixel.com/40/40"><a href="">Article similaire</a></li>
+                <li class="categoriesItem"><img src="http://lorempixel.com/40/40"><a href="">Article similaire</a></li>
+                <li class="categoriesItem"><img src="http://lorempixel.com/40/40"><a href="">Article similaire</a></li>
+                <li class="categoriesItem"><img src="http://lorempixel.com/40/40"><a href="">Article similaire</a></li>
             </ul>
         </div>
     </section>

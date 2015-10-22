@@ -233,10 +233,11 @@ section.sidebar{
 
         .singleEventThumbnail{
             padding:0px;
-            width:auto;
-            img{
+            .bgimage{
+                background-image: url('http://lorempixel.com/200/200');
+                background-size: cover;
                 width:100%;
-                height:auto;
+                height:200px;
             }
         }
 
@@ -244,6 +245,11 @@ section.sidebar{
             padding:10px;
 
             .singleEventInfos{
+                @media screen and (max-width:$desktop-min){
+                    padding:0px;
+                    padding-top:10px !important;
+                }
+
                 ul{
                     list-style:none;
                     padding:0px;
@@ -251,9 +257,56 @@ section.sidebar{
                     span{
                         text-transform: uppercase
                     }
-                    
+                    li{
+                        padding-left:10px;
+                        @media screen and (max-width:$mobile){
+                            padding-left:0px;
+                        }
+                    }
+
+                }
+
+                .metadata{
+                    float:right;
+                    text-align: right;
+                    text-transform: uppercase;
+                    .red{
+                        color:$red !important;
+                    }
+                }
+            }
+
+            .singleEventTxt{
+                padding:10px 0px;
+                p{
+                    margin:0;
                 }
             }
         }
     }
+}
+
+
+.singleSidebar{
+    ul{
+        padding:10px !important;
+        li{
+            margin-bottom:5px;
+            padding:5px;
+            width:100%;
+            @include gradient();
+            border-radius:5px;
+            height:50px !important;
+            &:last-child{
+                margin-bottom:0px;
+            }
+            a{
+                color:$gray !important;
+                text-transform: uppercase;
+                padding-left:10px;
+                font-size: 12px;
+            }
+        }
+    }
+    
 }
