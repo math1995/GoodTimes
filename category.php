@@ -18,8 +18,8 @@
 <div class="container">
 
 	<div class="clear"></div>
-	<section class="eventsList">
-		<article class="eventItem col-xs-12 col-md-9">
+	<section class="eventsList  col-xs-12 col-md-9">
+		<article class="eventItem">
 			<div class="eventThumbnail col-xs-12 col-md-4"></div>
 			<div class="eventContent">
 				<h3 class="eventTitle">Soirée cocktail</h3>

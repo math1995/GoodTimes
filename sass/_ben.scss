@@ -40,6 +40,7 @@ div.headerCategory{
         h2{
             line-height: 60px;
             text-transform: uppercase;
+            padding-left:15px;
 
             @media screen and (max-width:$mobile){
                 font-size:$title-size2;
@@ -49,23 +50,29 @@ div.headerCategory{
 }
 
 section.eventsList{
-
     margin-top: 40px;
+    margin-bottom:40px;
+
     article.eventItem{
         background: $gray;
         padding:0px;
+
         @media screen and (min-width: $desktop-min){
             
             border-radius: 0px 5px 5px 0px;
         }
 
         .eventThumbnail{
-            height:182px;
+            height:190px;
             background:url('http://lorempixel.com/500/500');
             background-size:cover;
             border-radius:5px 5px 0 0;
+
             @media screen and (max-width:$desktop-min) {
                 margin-bottom: 20px;
+            }
+            @media screen and (min-width:$desktop-min) and (max-width:$desktop-max){
+                height:211px;
             }
             @media screen and (min-width: $desktop-min){
                 margin-right:20px;
@@ -73,7 +80,7 @@ section.eventsList{
             }
         }  
         .eventContent{
-            padding:0 20px;
+            padding: 20px 20px;
             margin-bottom:15px;
             .eventTitle{
                 font-size:$title-size2;
@@ -81,6 +88,7 @@ section.eventsList{
                 font-family:$font;
                 font-weight:400;
                 text-transform: uppercase;
+                margin:0px
             }
 
             .eventDescri{
@@ -89,12 +97,16 @@ section.eventsList{
         }
         aside.eventInfos{
             width:100%;
-
+            height:40px;
             @include gradient();
 
             line-height:40px;
             padding:0 20px;
             border-radius:0 0 5px 5px;
+
+            @media screen and (min-width: $desktop-min){
+                line-height: 40px;
+            }
             
             .eventLength, .eventDate, .separator{
                 font-weight:700;
@@ -120,14 +132,13 @@ section.eventsList{
 }
 
 section.sidebar{
+    margin-top:40px;
     @media screen and (min-width:$desktop-min){
         padding:0px 10px;
     }
     @media screen and (max-width:$desktop-min){
         margin-top: 20px;
     }
-
-    padding: 0px;
     .searchbar{
         height:50px;
         background: $gray;
