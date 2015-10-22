@@ -5,21 +5,21 @@
 	<section class="slider"></section>
 	<div class="container">
 		<section class="moment col-xs-12">
-				<article class="col-xs-4 col-md-4 matinee">
+				<article class="col-xs-4 col-md-4 morning">
 					<p>Matinée</p>
 				</article>
 
-				<article class="col-xs-4 col-md-4 journee">
+				<article class="col-xs-4 col-md-4 day">
 					<p>Journée</p>
 				</article>
 
-				<article class="col-xs-4 col-md-4 soiree">
+				<article class="col-xs-4 col-md-4 night">
 					<p>Soirée</p>
 				</article>
 		</section>
 		<div class="clear"></div>
 
-		<div class="contenu_home">
+		<div class="content_home">
 				<section class="recetteduj">
 					<h2>La recette !</h2>
 					<p>
@@ -31,12 +31,12 @@
 						at lorem tempor, tempus odio ut, interdum est. Nulla sit amet nisl mollis, fringilla sapien non, euismod ligula.
 					</p>
 					<a href="#">
-						<div class="lireplus">
+						<div class="moreread">
 							<p>Lire la suite</p>
 						</div>
 					</a>
 				</section>
-				<section class="plusconsulte">
+				<section class="more_consult">
 					<h2>Les plus consultés</h2>
 					<article>
 						<img src="http://pipsum.com/80x80.jpg"/>

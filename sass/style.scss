@@ -134,19 +134,19 @@ body{
 			width: 200px;
 		}
 
-		article.matinee {
+		article.morning {
 			background-image: url("http://pipsum.com/200x200.jpg");
 			height: 200px;
 		
 		}
 
-		article.journee {
+		article.day {
 			background-image: url("http://pipsum.com/200x200.jpg");
 			height: 200px;
 		
 		}
 
-		article.soiree {
+		article.night {
 			background-image: url("http://pipsum.com/200x200.jpg");
 			height: 200px;
 		
@@ -154,7 +154,7 @@ body{
 	}
 
 
-	.contenu_home {
+	.content_home {
 		section.recetteduj {
 			background-color: $gray;
 			border-radius: 10px;
@@ -170,7 +170,7 @@ body{
 				text-align: justify;	
 			}
 
-			.lireplus {
+			.moreread {
 				margin-bottom: 0;
 				background-color: $gray-dark;
 				
@@ -181,7 +181,7 @@ body{
 			}
 		}
 
-		section.plusconsulte {
+		section.more_consult {
 			background-color: $gray;
 			border-radius: 10px;
 			
@@ -239,7 +239,12 @@ body{
 	/* NavBar - Menu */
 	nav {
 
-		background-color: $gray;
+		background-color: $menu-color;
+		z-index: 2;
+
+		.nav {
+			float: left;
+		}
 			
 			#hamb {
 				position: absolute;
@@ -282,6 +287,7 @@ body{
 
 			.navbar-nav ul {
 				padding-left: 0;
+				margin-top: 5px;
 			}
 
 			.navbar-nav ul li.page_item {
@@ -290,6 +296,8 @@ body{
 				font-size: 18px;
 				text-align: center;
 				margin-top: 10px;
+				float: left;
+				margin-right: 30px;
 
 				a {
 					text-decoration: none;
@@ -298,13 +306,13 @@ body{
 				}
 				
 				&:hover {
-					background-color: white;
+					color: $white;
 				}
 
 			}
 
 			#formSearchNavBar {
-				text-align: center;
+				float: right;
 			}
 	}
 
@@ -325,10 +333,79 @@ body{
 	}
 
 	section.slider {
-		background-image: url("http://pipsum.com/435x400.jpg");
+		background-image: url("http://pipsum.com/435x700.jpg");
 		width: 100%;
 		height: 300px;
+		position: absolute;
+		display: block;
+		top: 0;
 	}
+
+	section.moment {
+		margin-top: 300px;
+		margin-bottom: 100px;
+		display: block;
+		text-align: center;
+
+		article {
+			text-align: center;
+			margin-top: 20px;
+			border-radius: 100px;
+			width: 200px;
+			height: auto;
+		}
+
+		article:hover {
+			background-color: $menu-color;
+		}
+
+		article.morning {
+			background-image: url("http://pipsum.com/200x200.jpg");
+			height: 200px;
+		
+		}
+
+		article.day {
+			background-image: url("http://pipsum.com/200x200.jpg");
+			height: 200px;
+		
+		}
+
+		article.night {
+			background-image: url("http://pipsum.com/200x200.jpg");
+			height: 200px;
+		
+		}
+	}
+
+	.content_home {
+		section.recetteduj {
+			background-color: $gray;
+			border-radius: 10px;
+
+			h2 {
+				padding: 10px;
+				color: $red;
+				text-align: center;
+				text-transform: uppercase;
+			}
+			p {
+				padding: 10px;
+				text-align: justify;	
+			}
+
+			.moreread {
+				margin-bottom: 0;
+				background-color: $gray-dark;
+				
+				p {
+					color: $white;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
   
 }
 
