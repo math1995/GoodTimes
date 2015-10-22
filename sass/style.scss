@@ -4,12 +4,27 @@
 	Author: Eden, Noémie, Benjamin, Mathieu, Rémi.
 */
 
+
+@import "libs/bootstrap.scss";
+@import "_variable.scss";
+@import "_noemie";
+@import "_ben.scss";
+@import "style-math.scss";
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/* MOBILE */
+/* HOME */ 
+
+@import "libs/bootstrap";
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
 @import "_variable.scss";
 @import "_ben.scss";
-@import "_style-math.scss";
-@import "libs/bootstrap.scss";
-@import "libs/_normalize.scss";
-
+@import "style-math.scss";
+@import "libs/bootstrap";
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
@@ -76,9 +91,9 @@ body{
 				text-align: center;
 				margin-top: 10px;
 
-				a:active {
+				a {
 					text-decoration: none;
-				 	color: $white;
+				 	color: $black;
 				  	display: block;
 				}
 				
@@ -119,19 +134,19 @@ body{
 			width: 200px;
 		}
 
-		article.matinee {
+		article.morning {
 			background-image: url("http://pipsum.com/200x200.jpg");
 			height: 200px;
 		
 		}
 
-		article.journee {
+		article.day {
 			background-image: url("http://pipsum.com/200x200.jpg");
 			height: 200px;
 		
 		}
 
-		article.soiree {
+		article.night {
 			background-image: url("http://pipsum.com/200x200.jpg");
 			height: 200px;
 		
@@ -139,7 +154,7 @@ body{
 	}
 
 
-	.contenu_home {
+	.content_home {
 		section.recetteduj {
 			background-color: $gray;
 			border-radius: 10px;
@@ -155,7 +170,7 @@ body{
 				text-align: justify;	
 			}
 
-			.lireplus {
+			.moreread {
 				margin-bottom: 0;
 				background-color: $gray-dark;
 				
@@ -166,7 +181,7 @@ body{
 			}
 		}
 
-		section.plusconsulte {
+		section.more_consult {
 			background-color: $gray;
 			border-radius: 10px;
 			
@@ -223,8 +238,13 @@ body{
 	
 	/* NavBar - Menu */
 	nav {
+
 		background-color: $menu-color;
-		z-index: 100;
+		z-index: 2;
+
+		.nav {
+			float: left;
+		}
 			
 			#hamb {
 				position: absolute;
@@ -265,18 +285,10 @@ body{
 			    transform:translateY(-5px) rotate(-135deg);
 			}
 
-			.nav {
-				float: left;
-			}
-
 			.navbar-nav ul {
 				padding-left: 0;
 				margin-top: 5px;
 			}
-			.navbar-nav ul li.page_item:nth-child(1) {
-				margin-left: 100px;
-			}
-
 
 			.navbar-nav ul li.page_item {
 			    display: block;
@@ -327,7 +339,6 @@ body{
 		position: absolute;
 		display: block;
 		top: 0;
-
 	}
 
 	section.moment {
@@ -348,26 +359,26 @@ body{
 			background-color: $menu-color;
 		}
 
-		article.matinee {
+		article.morning {
 			background-image: url("http://pipsum.com/200x200.jpg");
 			height: 200px;
 		
 		}
 
-		article.journee {
+		article.day {
 			background-image: url("http://pipsum.com/200x200.jpg");
 			height: 200px;
 		
 		}
 
-		article.soiree {
+		article.night {
 			background-image: url("http://pipsum.com/200x200.jpg");
 			height: 200px;
 		
 		}
 	}
 
-	.contenu_home {
+	.content_home {
 		section.recetteduj {
 			background-color: $gray;
 			border-radius: 10px;
@@ -383,7 +394,7 @@ body{
 				text-align: justify;	
 			}
 
-			.lireplus {
+			.moreread {
 				margin-bottom: 0;
 				background-color: $gray-dark;
 				
@@ -394,9 +405,13 @@ body{
 			}
 		}
 	}
+
   
 }
 
+
+
+/**********************/ 
 
 /* DESKTOP */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
