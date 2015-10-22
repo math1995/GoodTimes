@@ -207,3 +207,53 @@ section.sidebar{
         }
     }
 }
+
+.singleLeft{
+    padding:0 10px;
+    .singleEventItem{
+        background: $gray;
+        border-radius:5px;
+        margin-top: 40px;
+        padding:0px;
+
+        .singleEventHeader{
+            @include gradient();
+            border-radius:5px 5px 0px 0px;
+            height:40px;
+            h2{
+                line-height: 40px;
+                padding-left:10px;
+                font-weight:400;
+                font-family:$font;
+                color:$gray;
+                font-size:$title-size2;
+                text-transform: uppercase;
+            }
+        }
+
+        .singleEventThumbnail{
+            padding:0px;
+            width:auto;
+            img{
+                width:100%;
+                height:auto;
+            }
+        }
+
+        .singleEventContent{
+            padding:10px;
+
+            .singleEventInfos{
+                ul{
+                    list-style:none;
+                    padding:0px;
+                    margin:0px;
+                    span{
+                        text-transform: uppercase
+                    }
+                    
+                }
+            }
+        }
+    }
+}
