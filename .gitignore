@@ -1,0 +1,20 @@
+# As Yeoman assumes the usage of Bower and Grunt, ignore the below:
+node_modules
+
+# Ignore automatically generated cruft
+*.log
+.sass-cache
+
+# Ignore config
+local-config.php
+
+
+# Operating system files
+.Spotlight-V100
+.Trashes
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Thumbs.db
+
+wp-content/themes/GoodTimes/style.css
