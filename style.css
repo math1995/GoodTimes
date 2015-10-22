@@ -2647,9 +2647,9 @@ body {
       font-size: 18px;
       text-align: center;
       margin-top: 10px; }
-      nav .navbar-nav ul li.page_item a {
+      nav .navbar-nav ul li.page_item a:active {
         text-decoration: none;
-        color: black;
+        color: #f4f4f4;
         display: block; }
       nav .navbar-nav ul li.page_item:hover {
         background-color: white; }
@@ -2735,7 +2735,8 @@ body {
 @media screen and (min-width: 768px) and (max-width: 992px) {
   /* NavBar - Menu */
   nav {
-    background-color: #eeeeee; }
+    background-color: rgba(216, 216, 216, 0.7);
+    z-index: 100; }
     nav #hamb {
       position: absolute;
       top: 0;
@@ -2763,22 +2764,29 @@ body {
       opacity: 0; }
     nav .animate .icon-bar:nth-child(3) {
       transform: translateY(-5px) rotate(-135deg); }
+    nav .nav {
+      float: left; }
     nav .navbar-nav ul {
-      padding-left: 0; }
+      padding-left: 0;
+      margin-top: 5px; }
+    nav .navbar-nav ul li.page_item:nth-child(1) {
+      margin-left: 100px; }
     nav .navbar-nav ul li.page_item {
       display: block;
       text-decoration: none;
       font-size: 18px;
       text-align: center;
-      margin-top: 10px; }
+      margin-top: 10px;
+      float: left;
+      margin-right: 30px; }
       nav .navbar-nav ul li.page_item a {
         text-decoration: none;
         color: black;
         display: block; }
       nav .navbar-nav ul li.page_item:hover {
-        background-color: white; }
+        color: #f4f4f4; }
     nav #formSearchNavBar {
-      text-align: center; }
+      float: right; }
   .navbar {
     margin-bottom: 0px; }
   .navbar-brand {
@@ -2788,9 +2796,51 @@ body {
   .navbar-brand {
     color: black; }
   section.slider {
-    background-image: url("http://pipsum.com/435x400.jpg");
+    background-image: url("http://pipsum.com/435x700.jpg");
     width: 100%;
-    height: 300px; } }
+    height: 300px;
+    position: absolute;
+    display: block;
+    top: 0; }
+  section.moment {
+    margin-top: 300px;
+    margin-bottom: 100px;
+    display: block;
+    text-align: center; }
+    section.moment article {
+      text-align: center;
+      margin-top: 20px;
+      border-radius: 100px;
+      width: 200px;
+      height: auto; }
+    section.moment article:hover {
+      background-color: rgba(216, 216, 216, 0.7); }
+    section.moment article.matinee {
+      background-image: url("http://pipsum.com/200x200.jpg");
+      height: 200px; }
+    section.moment article.journee {
+      background-image: url("http://pipsum.com/200x200.jpg");
+      height: 200px; }
+    section.moment article.soiree {
+      background-image: url("http://pipsum.com/200x200.jpg");
+      height: 200px; }
+  .contenu_home section.recetteduj {
+    background-color: #eeeeee;
+    border-radius: 10px; }
+    .contenu_home section.recetteduj h2 {
+      padding: 10px;
+      color: #a11526;
+      text-align: center;
+      text-transform: uppercase; }
+    .contenu_home section.recetteduj p {
+      padding: 10px;
+      text-align: justify; }
+    .contenu_home section.recetteduj .lireplus {
+      margin-bottom: 0;
+      background-color: #2f2f2f; }
+      .contenu_home section.recetteduj .lireplus p {
+        color: #f4f4f4;
+        text-decoration: none; } }
 
 /* DESKTOP */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
