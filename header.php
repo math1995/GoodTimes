@@ -24,14 +24,7 @@
             <div class="navbar-brand"> Logo </div>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <?= wp_nav_menu( array('theme_location' => 'main', "menu_class" => "nav navbar-nav") ); ?>
-            <div id="formSearchNavBar">
-              <form method="get" class="menu-search-form" action="<?= get_bloginfo('home'); ?>">
-                <p>
-                  <input type="text" placeholder="&#xf002;" style="font-family:FontAwesome;"/>
-                </p>
-              </form>
-          </div>
+            <?= wp_nav_menu( array('theme_location' => 'main', "menu_class" => "nav navbar-nav") ); ?>   
           </div>        
       </nav>
   </header>

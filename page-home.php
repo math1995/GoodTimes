@@ -3,62 +3,106 @@
 <?php get_header(); ?>
 <body>
 	<section class="slider"></section>
-	<div class="container">
-		<section class="moment col-xs-12">
-				<article class="col-xs-4 col-md-4 morning">
-					<p>Matinée</p>
-				</article>
+		<div class="container">
+			<section class="moment">
+				<div class="row">	
+					<article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 morning">	
+						<a href="#">
+							<img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
+							<p>Matinée</p>
+						</a>
+					</article>
 
-				<article class="col-xs-4 col-md-4 day">
-					<p>Journée</p>
-				</article>
+					<article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 day">
+						<a href="#">
+							<img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
+							<p>Journée</p>
+						</a>
+					</article>
 
-				<article class="col-xs-4 col-md-4 night">
-					<p>Soirée</p>
-				</article>
-		</section>
-		<div class="clear"></div>
+					<article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 night">
+						<a href="#">
+							<img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
+							<p>Soirée</p>
+						</a>
+					</article>
+				</div>
+			</section>
+			<div class="clear"></div>
 
-		<div class="content_home">
-				<section class="recetteduj">
-					<h2>La recette !</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas orci ante, porta quis mollis a, efficitur
-						non risus. Nulla interdum leo at massa cursus, sed eleifend sapien mollis. Mauris commodo at nunc ac consequat. 
-						Integer rutrum arcu justo, eget luctus lacus mattis egestas. Sed suscipit venenatis ante, at molestie ligula accumsan non. 
-						Suspendisse lectus dolor, tincidunt eu tortor laoreet, faucibus porta ipsum. Proin aliquam ultricies interdum. Aenean 
-						fringilla sapien sit amet leo sagittis, vel vehicula ex placerat. Donec consectetur sapien id gravida rutrum.
-						at lorem tempor, tempus odio ut, interdum est. Nulla sit amet nisl mollis, fringilla sapien non, euismod ligula.
-					</p>
-					<a href="#">
+			<div class="content_home">
+					<section class="col-md-6 col-lg-6 recipe">
+						<h2>La recette du jour !</h2>
+						<p class="content_recipe">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas orci ante, porta quis mollis a, efficitur
+							non risus. Nulla interdum leo at massa cursus, sed eleifend sapien mollis. Mauris commodo at nunc ac consequat. 
+							Integer rutrum arcu justo, eget luctus lacus mattis egestas.
+						</p>
+
 						<div class="moreread">
-							<p>Lire la suite</p>
+							<a href="#">
+								<p>Lire la suite</p>
+							</a>
 						</div>
-					</a>
-				</section>
-				<section class="more_consult">
-					<h2>Les plus consultés</h2>
-					<article>
-						<img src="http://pipsum.com/80x80.jpg"/>
-						<h3>Titre</h3>
-						<div class="clear">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas orci ante, porta quis mollis a, efficitur
-							non risus. Nulla interdum leo at massa cursus, sed eleifend sapien mollis. 
-						</p>
-					</article>
-					<article class="change">
-						<img src="http://pipsum.com/80x80.jpg"/>
-						<h3>Titre</h3>
-						<div class="clear">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas orci ante, porta quis mollis a, efficitur
-							non risus. Nulla interdum leo at massa cursus, sed eleifend sapien mollis. 
-						</p>
-					</article>
-				</section>
-		</section>
-	</div>
+
+					</section>
+					<section class="col-md-6 col-lg-6 more_consult">
+						<h2>Les plus consultés</h2>
+							<a href="#">
+								<article>
+									<div class="left_picture">
+										<img src="http://pipsum.com/80x80.jpg"/>
+									</div>
+									<div class="right_text">
+										<h3>Titre</h3>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+										</p>
+									</div>
+								</article>
+							</a>
+							<a href="#">	
+								<article class="change">
+									<div class="left_picture">
+										<img src="http://pipsum.com/80x80.jpg"/>
+									</div>
+									<div class="right_text">
+										<h3>Titre</h3>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+										</p>
+									</div>
+								</article>
+							</a>
+							<a href="">
+								<article>
+									<div class="left_picture">
+										<img src="http://pipsum.com/80x80.jpg"/>
+									</div>
+									<div class="right_text">
+										<h3>Titre</h3>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+										</p>
+									</div>
+								</article>
+							</a>
+							<a href="#">
+								<article class="change">
+									<div class="left_picture">
+										<img src="http://pipsum.com/80x80.jpg"/>
+									</div>
+									<div class="right_text">
+										<h3>Titre</h3>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+										</p>
+									</div>
+								</article>
+							</a>
+					</section>
+			</div>
+		</div>
 </body>
 
 <?php get_footer(); ?>

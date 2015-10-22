@@ -11,35 +11,46 @@
 @import "_ben.scss";
 @import "style-math.scss";
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-/* MOBILE */
 /* HOME */ 
-
-@import "libs/bootstrap";
-
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
-
-@import "_variable.scss";
-@import "_ben.scss";
-@import "style-math.scss";
-@import "libs/bootstrap";
-
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 body{
     font-family: $font;
     font-size:$title-size2;
     color:black;
-    font-weight:400;
+    font-weight:100;
 }
+
+a:hover {
+	color: black;
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+
+/* FOOTER */
+
+footer {
+	@include gradient();
+	margin-top: 50px;
+	padding: 15px;
+	width: 100%;
+	color: white;
+	font-size: 18px;
+	text-align:center;
+	font-family: $font;
+}
+
+
 /* MOBILE */
-@media screen and (min-width: 0px) and (max-width: 768px) {
+@media screen and (min-width: 0px) and (max-width: 750px) {
 	/* NavBar - Menu */
 	nav {
 
-		background-color: $gray;
+		background-color: transparent;
 			
 			#hamb {
 				position: absolute;
@@ -80,6 +91,10 @@ body{
 			    transform:translateY(-5px) rotate(-135deg);
 			}
 
+			.navbar-collapse {
+				background-color: $gray1;
+			}
+
 			.navbar-nav ul {
 				padding-left: 0;
 			}
@@ -89,22 +104,22 @@ body{
 			    text-decoration: none;
 				font-size: 18px;
 				text-align: center;
-				margin-top: 10px;
 
 				a {
 					text-decoration: none;
 				 	color: $black;
 				  	display: block;
+				  	padding: 10px;
 				}
 				
-				&:hover {
-					background-color: white;
+				&:active {
+					background-color: $gray2;
 				}
 
-			}
+				&:hover {
+					background-color: $gray2;
+				}
 
-			#formSearchNavBar {
-				text-align: center;
 			}
 
 	}
@@ -113,54 +128,54 @@ body{
 		margin-bottom: 0px;
 	}
 
-	.navbar-brand {
-	   	color: $black;
-	}
-
 	section.slider {
-		background-image: url("http://pipsum.com/435x400.jpg");
+		background-image: url("http://pipsum.com/1500x700.jpg");
 		width: 100%;
 		height: 200px;
 	}
 
 	section.moment {
+		width: 100%;
 
 		article {
-			display: block;
-			text-align: center;
-			margin: 0 auto;
 			margin-top: 20px;
-			border-radius: 100px;
-			width: 200px;
-		}
+			
+			a {
+				color: $black;
+				
+				&:hover {
+					color:$red;
+					text-decoration: none;
+				}
+			}
+			img {
+				display: block;
+				margin: 0 auto;
+				cursor: pointer;
+				
+			}
 
-		article.morning {
-			background-image: url("http://pipsum.com/200x200.jpg");
-			height: 200px;
-		
-		}
-
-		article.day {
-			background-image: url("http://pipsum.com/200x200.jpg");
-			height: 200px;
-		
-		}
-
-		article.night {
-			background-image: url("http://pipsum.com/200x200.jpg");
-			height: 200px;
-		
+			p {
+				text-align: center;
+				font-size: $title-size1;
+				text-transform: uppercase;
+			}
 		}
 	}
 
 
 	.content_home {
-		section.recetteduj {
-			background-color: $gray;
-			border-radius: 10px;
+		section.recipe {
+			background-color: $gray2;
+			border-radius: 5px;
+			margin-top: 10px;
+			margin-right: 15px;
+			margin-left: 15px;
+			padding-right: 0;
+			padding-left: 0;
 			
 			h2 {
-				padding: 10px;
+				padding-top: 30px;
 				color: $red;
 				text-align: center;
 				text-transform: uppercase;
@@ -169,63 +184,106 @@ body{
 				padding: 10px;
 				text-align: justify;	
 			}
-
+		
 			.moreread {
 				margin-bottom: 0;
-				background-color: $gray-dark;
+				@include gradient();
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
 				
-				p {
-					color: $white;
+				a { 
+					cursor: pointer;
 					text-decoration: none;
+
+					&:hover {
+						color:$gray1;
+					}
+					p {
+						font-size: $title-size1;
+						color: $white;
+						text-decoration: none;
+						text-align: right;
+					}
 				}
 			}
 		}
 
 		section.more_consult {
-			background-color: $gray;
-			border-radius: 10px;
+
+			a {
+				color: black;
+				&:hover {
+					color: black;
+					text-decoration: none;
+				}
+			} 
 			
 			h2 {
+				@include gradient();
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
 				color: $white;
 				text-align: center;
 				text-transform: uppercase;
 				font-size: $title-size1;
-				background-color: $gray-dark;
-				padding: 10px;
+				padding: 18px;
 				margin-bottom: 0px;
 			}
 
 			article.change {
-				background-color: $red;
+				background-color: $gray_consult;
+				overflow:hidden;
+
 			}
 
 
 			article {
-				padding-top: 10px;
 				background-color: $white;
+				overflow:hidden;
+				cursor: pointer;
 
-				img {
+				&:last-child {
+					padding-bottom: 10px;
+					border-bottom-left-radius: 5px;
+					border-bottom-right-radius: 5px;
+				}
+
+				.left_picture{
 					float: left;
+					img {
+						border-radius: 2px;
+						margin-top: 10px;
+						margin-left: 10px;
+						margin-bottom: 10px;
+						background-color: $white;
+
+					}
 				}
 
-				h3 {
-					float: right;
+				.right_text{
 					padding: 10px;
-					padding-left: 10px;
-					color: $red;
-					text-align: center;
-					text-transform: uppercase;
-					font-size: 18px;
-					margin-top: 0px;
-					margin-bottom: 0px
-				}
+					h3 {
+						height: auto;
+						margin-left: 10px;
+						margin-right: 12px;
+						float: left;
+						color: $red;
+						text-align: center;
+						text-transform: uppercase;
+						font-size: 18px;
+						margin-top: 0px;
+						margin-bottom: 0px
+					}
 
-				p {
-					margin-top: 0px;
-					margin-bottom: 0px;
-					padding-left: 10px;
-					padding-right: 10px;
-					text-align: justify;	
+					p {
+						width: 100%;
+						margin-top: 0px;
+						margin-bottom: 0px;
+						padding-left: 10px;
+						padding-right: 10px;
+						margin-left: 5px; 
+					}
+
 				}
 			}
 		}
@@ -234,7 +292,7 @@ body{
 }
 
 /* TABLET */
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 750px) and (max-width: 992px) {
 	
 	/* NavBar - Menu */
 	nav {
@@ -243,7 +301,7 @@ body{
 		z-index: 2;
 
 		.nav {
-			float: left;
+			float: right;
 		}
 			
 			#hamb {
@@ -285,55 +343,29 @@ body{
 			    transform:translateY(-5px) rotate(-135deg);
 			}
 
-			.navbar-nav ul {
-				padding-left: 0;
-				margin-top: 5px;
-			}
-
 			.navbar-nav ul li.page_item {
 			    display: block;
 			    text-decoration: none;
 				font-size: 18px;
 				text-align: center;
-				margin-top: 10px;
 				float: left;
-				margin-right: 30px;
+				padding-right: 30px;
 
 				a {
 					text-decoration: none;
 				 	color: $black;
 				  	display: block;
-				}
 				
-				&:hover {
-					color: $white;
+					&:hover {
+						color: $red;
+					}
 				}
 
 			}
-
-			#formSearchNavBar {
-				float: right;
-			}
-	}
-
-	.navbar {
-		margin-bottom: 0px;
-	}
-
-	.navbar-brand {
-	   	color: $black;
-	}
-
-	.navbar {
-		margin-bottom: 0px;
-	}
-
-	.navbar-brand {
-	   	color: $black;
 	}
 
 	section.slider {
-		background-image: url("http://pipsum.com/435x700.jpg");
+		background-image: url("http://pipsum.com/1500x700.jpg");
 		width: 100%;
 		height: 300px;
 		position: absolute;
@@ -341,50 +373,50 @@ body{
 		top: 0;
 	}
 
+
 	section.moment {
-		margin-top: 300px;
-		margin-bottom: 100px;
-		display: block;
-		text-align: center;
+		width: 100%;
+		margin-top: 250px;
 
 		article {
-			text-align: center;
 			margin-top: 20px;
-			border-radius: 100px;
-			width: 200px;
-			height: auto;
-		}
+			
+			a {
+				color: $black;
+				
+				&:hover {
+					color:$red;
+					text-decoration: none;
+				}
+			}
+			img {
+				display: block;
+				margin: 0 auto;
+				cursor: pointer;
+				
+			}
 
-		article:hover {
-			background-color: $menu-color;
-		}
-
-		article.morning {
-			background-image: url("http://pipsum.com/200x200.jpg");
-			height: 200px;
-		
-		}
-
-		article.day {
-			background-image: url("http://pipsum.com/200x200.jpg");
-			height: 200px;
-		
-		}
-
-		article.night {
-			background-image: url("http://pipsum.com/200x200.jpg");
-			height: 200px;
-		
+			p {
+				text-align: center;
+				font-size: $title-size1;
+				text-transform: uppercase;
+			}
 		}
 	}
 
-	.content_home {
-		section.recetteduj {
-			background-color: $gray;
-			border-radius: 10px;
 
+	.content_home {
+		section.recipe {
+			background-color: $gray2;
+			border-radius: 5px;
+			margin-top: 10px;
+			margin-right: 15px;
+			margin-left: 15px;
+			padding-right: 0;
+			padding-left: 0;
+			
 			h2 {
-				padding: 10px;
+				padding-top: 30px;
 				color: $red;
 				text-align: center;
 				text-transform: uppercase;
@@ -393,31 +425,353 @@ body{
 				padding: 10px;
 				text-align: justify;	
 			}
-
+		
 			.moreread {
 				margin-bottom: 0;
-				background-color: $gray-dark;
+				@include gradient();
 				
-				p {
-					color: $white;
+				a { 
+					cursor: pointer;
 					text-decoration: none;
+
+					&:hover {
+						color:$gray1;
+					}
+					p {
+						font-size: $title-size1;
+						color: $white;
+						text-decoration: none;
+						text-align: right;
+					}
+				}
+			}
+		}
+
+		section.more_consult {
+
+			a {
+				color: black;
+				&:hover {
+					color: black;
+					text-decoration: none;
+				}
+			} 
+			
+			h2 {
+				@include gradient();
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				color: $white;
+				text-align: center;
+				text-transform: uppercase;
+				font-size: $title-size1;
+				padding: 18px;
+				margin-bottom: 0px;
+			}
+
+			article.change {
+				background-color: $gray_consult;
+				overflow:hidden;
+
+			}
+
+
+			article {
+				background-color: $white;
+				overflow:hidden;
+				cursor: pointer;
+
+				&:last-child {
+					padding-bottom: 10px;
+					border-bottom-left-radius: 5px;
+					border-bottom-right-radius: 5px;
+				}
+
+				.left_picture{
+					float: left;
+					img {
+						border-radius: 2px;
+						margin-top: 10px;
+						margin-left: 10px;
+						margin-bottom: 10px;
+						background-color: $white;
+
+					}
+				}
+
+				.right_text{
+					padding: 10px;
+					h3 {
+						height: auto;
+						margin-left: 10px;
+						margin-right: 12px;
+						float: left;
+						color: $red;
+						text-align: center;
+						text-transform: uppercase;
+						font-size: 18px;
+						margin-top: 0px;
+						margin-bottom: 0px
+					}
+
+					p {
+						width: 100%;
+						margin-top: 0px;
+						margin-bottom: 0px;
+						padding-left: 10px;
+						padding-right: 10px;
+						margin-left: 5px; 
+					}
+
 				}
 			}
 		}
 	}
-
-  
+      
 }
 
 
 
-/**********************/ 
+ 
 
 /* DESKTOP */
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-	section.slider {
-		background-image: url("http://pipsum.com/435x400.jpg");
-		width: 100%;
-		height: 400px;
+@media screen and (min-width: 992px) {
+	/* NavBar - Menu */
+	nav {
+
+		background-color: $menu-color;
+		z-index: 2;
+
+		.nav {
+			float: right;
+		}
+			
+			#hamb {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;  
+				cursor: pointer;  
+				height:100px;
+				margin: auto;
+				margin-top:35%;
+
+			}	
+
+			.icon-bar {
+				background-color: $black;
+				display: block;
+				width:100%;
+				height:20%;
+				transition:0.20s;
+				-webkit-transition:0.0s;  
+				-webkit-user-select: none;
+				-moz-user-select: none;    
+				-ms-user-select: none;      
+				user-select: none; 
+			}
+
+
+			.animate .icon-bar:nth-child(1) {
+			    transform:translateY(7px) rotate(135deg);
+			}
+
+			.animate .icon-bar:nth-child(2) {
+			    opacity: 0;
+			}
+
+			.animate .icon-bar:nth-child(3) {
+			    transform:translateY(-5px) rotate(-135deg);
+			}
+
+			.navbar-nav ul li.page_item {
+			    display: block;
+			    text-decoration: none;
+				font-size: 18px;
+				text-align: center;
+				float: left;
+				padding-right: 30px;
+
+				a {
+					text-decoration: none;
+				 	color: $black;
+				  	display: block;
+				
+					&:hover {
+						color: $red;
+					}
+				}
+
+			}
 	}
+
+
+
+	section.slider {
+		background-image: url("http://pipsum.com/1500x700.jpg");
+		width: 100%;
+		height: 300px;
+		position: absolute;
+		display: block;
+		top: 0;
+	}
+
+
+	section.moment {
+		width: 100%;
+		margin-top: 250px;
+
+		article {
+			margin-top: 20px;
+			
+			a {
+				color: $black;
+				
+				&:hover {
+					color:$red;
+					text-decoration: none;
+				}
+			}
+			img {
+				display: block;
+				margin: 0 auto;
+				cursor: pointer;
+				
+			}
+
+			p {
+				text-align: center;
+				font-size: $title-size1;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+
+	.content_home {
+		section.recipe {
+			background-color: $gray2;
+			border-radius: 5px;
+			margin-top: 10px;
+			padding-right: 0;
+			padding-left: 0;			
+			h2 {
+				padding-top: 30px;
+				color: $red;
+				text-align: center;
+				text-transform: uppercase;
+			}
+			p.content_recipe {
+				padding: 30px;
+				text-align: justify;	
+			}
+		
+			.moreread {
+				@include gradient();
+				cursor: pointer;
+				
+				a { 
+					cursor: pointer;
+					text-decoration: none;
+
+					&:hover {
+						color:$gray1;
+					}
+					p {
+						padding-top: 10px;
+						padding-bottom: 10px;
+						padding-right:30px;
+						font-size: $title-size1;
+						color: $white;
+						text-decoration: none;
+						text-align: right;
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+		section.more_consult {
+			margin-top: 10px;
+
+			a {
+				color: black;
+				&:hover {
+					color: black;
+					text-decoration: none;
+				}
+			} 
+			
+			h2 {
+				@include gradient();
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				color: $white;
+				text-align: center;
+				text-transform: uppercase;
+				font-size: $title-size1;
+				padding: 18px;
+				margin-bottom: 0px;
+			}
+
+			article.change {
+				background-color: $gray_consult;
+				overflow:hidden;
+
+			}
+
+
+			article {
+				background-color: $white;
+				overflow:hidden;
+				cursor: pointer;
+
+				&:last-child {
+					padding-bottom: 10px;
+					border-bottom-left-radius: 5px;
+					border-bottom-right-radius: 5px;
+				}
+
+				.left_picture{
+					float: left;
+					img {
+						border-radius: 2px;
+						margin-top: 10px;
+						margin-left: 10px;
+						margin-bottom: 10px;
+						background-color: $white;
+
+					}
+				}
+
+				.right_text{
+					padding: 10px;
+					h3 {
+						height: auto;
+						margin-left: 10px;
+						margin-right: 12px;
+						float: left;
+						color: $red;
+						text-align: center;
+						text-transform: uppercase;
+						font-size: 18px;
+						margin-top: 0px;
+						margin-bottom: 0px
+					}
+
+					p {
+						width: 100%;
+						margin-top: 0px;
+						margin-bottom: 0px;
+						padding-left: 10px;
+						padding-right: 10px;
+						margin-left: 5px; 
+					}
+
+				}
+			}
+		}
+	}
+      
 }

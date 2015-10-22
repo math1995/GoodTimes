@@ -1,22 +1,25 @@
 /* Colors */
 
-$gray : #eeeeee;
-$gray-dark : #2f2f2f;
+$gray : #fbfbfb;
+$gray1 : #fdfdfd; 
+$gray2 : #e7e7e7;
+$gray3 : #2f2f2f;
 $black : black;
 $white : #f4f4f4;
 $red : #a11526;
+$gray_consult : #d9d6d6;
 $menu-color : rgba(216, 216, 216, 0.7);
 
 /* Fonts import */
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400);
 
 /* Fonts size */
 
 $title-size1 : 18px;
 $title-size2 : 15px;
-$font : 'Montserrat';
+$font : Quicksand;
 
 /* MEDIA WIDTHS */
 
@@ -38,3 +41,9 @@ $desktop-max:1200px;
 /* TOOLS */
 
 .clear { clear: both; }
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

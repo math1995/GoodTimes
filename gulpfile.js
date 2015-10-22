@@ -21,16 +21,14 @@ var livereload = require('gulp-livereload');
 
 gulp.task('default', function(){
  
-    console.log('default gulp task...')
+    console.log('default gulp task...');
  
 });
 
 gulp.task('sass', function () {
  
     gulp.src('./sass/*.scss')
- 
         .pipe(sass())
- 
         .pipe(gulp.dest('./'));
  
 });
@@ -56,16 +54,11 @@ gulp.task('default', ['sass', 'js']);
 gulp.task('img', function() {
  
   gulp.src('img/*.{png,jpg,gif}')
- 
-    .pipe(imagemin({
- 
-      optimizationLevel: 7,
- 
-      progressive: true
- 
-    }))
- 
-    .pipe(gulp.dest('img'))
+  .pipe(imagemin({
+    optimizationLevel: 7,
+    progressive: true
+  }))
+  .pipe(gulp.dest('img'));
  
 });
 
@@ -86,12 +79,10 @@ gulp.task('default', ['sass', 'img', 'watch']);
 gulp.task('sass', function () {
  
   gulp.src('./sass/*.scss')
- 
-    .pipe(plumber(plumberErrorHandler))
- 
-    .pipe(sass())
- 
-    .pipe(gulp.dest('./'))
+     .pipe(plumber(plumberErrorHandler))
+     .pipe(sass())
+     .pipe(gulp.dest('./'))
+     .pipe(livereload());
  
 });
 
@@ -108,13 +99,3 @@ gulp.task('watch', function() {
 
   //gulp.watch('./*.php', ['php']);
 });
-
-
-
-
-
-
-
-
-
-
