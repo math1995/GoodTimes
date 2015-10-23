@@ -2,20 +2,23 @@
 
 <?php get_header(); ?>
  	
+
  <section class="content">
            <div class="bg-img"> 
                 <form method = "POST" class="desktop">
-                   <h2> Faites nous signe</h2>
-                    <input><?php the_field('nom_&_prenom'); ?></input>
-                    <input><?php the_field('email'); ?></input>
-                    <textarea><?php the_field('ecrire_un_message'); ?></textarea>
+                    <h2> Faites nous signe !</h2>
+                    <input placeholder="Nom et Prénom"><?php the_field('nom_&_prenom'); ?></input>
+                    <input placeholder="Email"><?php the_field('email'); ?></input>
+                    <textarea placeholder="Message"><?php the_field('ecrire_un_message'); ?></textarea><br>
+                    <input type="submit" class="button" value="Envoyer"></input>
                 </form>
             </div>
             <form method = "POST" class="mobile">
-               <h2> Faites nous signe</h2>
-                <input><?php the_field('nom_&_prenom'); ?></input>
-                <input><?php the_field('email'); ?></input>
-                <textarea><?php the_field('ecrire_un_message'); ?></textarea>
+                <h2> Faites nous signe ! </h2>
+                <input placeholder="Nom et Prénom"><?php the_field('nom_&_prenom'); ?></input>
+                <input placeholder="Email"><?php the_field('email'); ?></input>
+                <textarea placeholder="Message"><?php the_field('ecrire_un_message'); ?></textarea><br>
+                <input type="submit" class="button" value="Envoyer"></input>
             </form>
         
 </section>
@@ -31,4 +34,6 @@
         </ul>
 </section>
 
+
 <?php get_footer(); ?>
+
