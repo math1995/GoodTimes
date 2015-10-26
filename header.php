@@ -21,11 +21,17 @@
               <span class="icon-bar"></span>
             </div>
             </button>
-            <div class="navbar-brand"> Logo </div>
+            <div class="navbar-brand"> GoodTimes. </div>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <?= wp_nav_menu( array('theme_location' => 'main', "menu_class" => "nav navbar-nav") ); ?>   
-          </div>        
+             <div class="hidden-mobile nav-search">
+                  <?php get_search_form() ?>
+            </div>
+            <?= wp_nav_menu( array('theme_location' => 'main', "menu_class" => "nav navbar-nav") ); ?>
+            <div class="nav-search-mobile hidden-menu">
+                  <?php get_search_form() ?>
+            </div>
+          </div>
       </nav>
   </header>
     

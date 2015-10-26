@@ -50,3 +50,18 @@ $desktop-max:1200px;
   margin-left: auto;
   margin-right: auto;
 }
+
+@media screen and (min-width: 0px) and (max-width: 750px) {
+  .hidden-mobile {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .hidden-menu {
+    display: none;
+    visibility: hidden;
+  }
+}
+

@@ -1,6 +1,5 @@
 /*
 	Theme Name: Goodtimes
-	Theme URI: http://google.fr
 	Author: Eden, Noémie, Benjamin, Mathieu, Rémi.
 */
 
@@ -9,7 +8,6 @@
 @import "_variable.scss";
 @import "_noemie";
 @import "_ben.scss";
-@import "style-math.scss";
 
 
 /* HOME */ 
@@ -55,7 +53,7 @@ footer {
 	nav {
 
 		background-color: transparent;
-			
+		
 			#hamb {
 				position: absolute;
 				top: 0;
@@ -125,6 +123,50 @@ footer {
 				}
 
 			}
+
+		.nav-search-mobile {
+			float: right;
+			width: 100%;
+
+			form {
+				margin-top: 5px;
+				margin-bottom: 15px;
+				display: block;
+				text-align:center;
+
+				input {
+					outline: none;
+				}
+
+				input[type=text] {
+						-webkit-appearance: textfield;
+						-webkit-box-sizing: content-box;
+						background: transparent url(img/search-icon.png) no-repeat 9px center;
+						color: black;
+						border: solid 1px $gray3;
+						padding: 9px 10px 9px 32px;
+						border-radius: 10em;
+						color: transparent;
+						cursor: pointer;
+						width: 85%;
+
+						&:hover {
+							background-color: #fff;
+						}
+
+						&:focus {
+							background-color: #fff;
+							color: #000;
+							cursor: auto;
+						}
+				}
+			}
+
+			input::-webkit-search-decoration, input::-webkit-search-cancel-button {
+					display: none; 
+			}
+
+		}
 
 	}
 
@@ -303,6 +345,52 @@ footer {
 
 		background-color: $menu-color;
 		z-index: 2;
+
+		.nav-search {
+			float: right;
+
+			form {
+				margin-top: 8px;
+				margin-right: 10px;
+
+				input {
+					outline: none;
+				}
+
+				input[type=text] {
+						-webkit-appearance: textfield;
+						-webkit-box-sizing: content-box;
+						background: transparent url(img/search-icon.png) no-repeat 9px center;
+						color: black;
+						border: solid 1px transparent;
+						padding: 9px 10px 9px 32px;
+						border-radius: 10em;
+						@include transition(0.5s);
+						width: 20px;
+						padding-left: 10px;
+						color: transparent;
+						cursor: pointer;
+
+						&:hover {
+							background-color: #fff;
+						}
+
+						&:focus {
+							width: 130px;
+							background-color: #fff;
+							@include box-shadow(0 0 5px rgba(109,207,246,.5));
+							padding-left: 32px;
+							color: #000;
+							cursor: auto;
+						}
+				}
+			}
+
+			input::-webkit-search-decoration, input::-webkit-search-cancel-button {
+					display: none; 
+			}
+
+		}
 
 		.nav {
 			float: right;
@@ -546,6 +634,52 @@ footer {
 		background-color: $menu-color;
 		z-index: 2;
 
+		.nav-search {
+			float: right;
+
+			form {
+				margin-top: 8px;
+				margin-right: 10px;
+
+				input {
+					outline: none;
+				}
+
+				input[type=text] {
+						-webkit-appearance: textfield;
+						-webkit-box-sizing: content-box;
+						background: transparent url(img/search-icon.png) no-repeat 9px center;
+						color: black;
+						border: solid 1px transparent;
+						padding: 9px 10px 9px 32px;
+						border-radius: 10em;
+						@include transition(0.5s);
+						width: 20px;
+						padding-left: 10px;
+						color: transparent;
+						cursor: pointer;
+
+						&:hover {
+							background-color: #fff;
+						}
+
+						&:focus {
+							width: 130px;
+							background-color: #fff;
+							@include box-shadow(0 0 5px rgba(109,207,246,.5));
+							padding-left: 32px;
+							color: #000;
+							cursor: auto;
+						}
+				}
+			}
+
+			input::-webkit-search-decoration, input::-webkit-search-cancel-button {
+					display: none; 
+			}
+
+		}
+
 		.nav {
 			float: right;
 		}
@@ -608,6 +742,7 @@ footer {
 				}
 
 			}
+
 	}
 
 

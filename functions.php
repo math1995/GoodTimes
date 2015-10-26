@@ -18,8 +18,12 @@ function wpt_register_css() {
 }
 add_action( 'wp_enqueue_scripts', 'wpt_register_css' );
 
+
+
+
 // Catégories : journée + soirée
 // 
+
 
 add_action('init', 'custom_post_type');
 function custom_post_type() {
@@ -225,17 +229,3 @@ function action_function_name( $args ) {
 
 }
 add_action( 'acf/input/form_data', 'action_function_name', 10, 1 );
-
-
-// Ajout de la barre de recherche dans le header
-function add_search_box($items, $args) {
- 
-        ob_start();
-        get_search_form();
-        $searchform = ob_get_contents();
-        ob_end_clean();
- 
-        $items .= '<li>' . $searchform . '</li>'; 
-        return $items;
-}
-add_filter('wp_nav_menu_items','add_search_box', 10, 2);
