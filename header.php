@@ -9,6 +9,11 @@
     <!-- CSS -->
     <link href="<?php echo get_template_directory_uri() ?>/style.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="<?php bloginfo('template_url'); ?>/lib/owl.carousel.css"/>
+    
+    <script src="<?php bloginfo('template_url');?>/lib/owl.carousel.min.js"></script>
+    <script src="<?php bloginfo('template_url');?>/lib/jquery/dist/jquery.min.js"></script>
+    <script src="<?php bloginfo('template_url');?>/js/app.js"></script>
   </head>
   
   <header>   
@@ -21,7 +26,7 @@
               <span class="icon-bar"></span>
             </div>
             </button>
-            <div class="navbar-brand"> GoodTimes. </div>
+            <div class="navbar-brand"> <?php bloginfo('name'); ?></div>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
              <div class="hidden-mobile nav-search">

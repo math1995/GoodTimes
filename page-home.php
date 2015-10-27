@@ -2,33 +2,46 @@
 
 <?php get_header(); ?>
 <body>
-	<section class="slider"></section>
-		<div class="container">
-			<section class="moment">
-				<div class="row">	
-					<article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 morning">	
-						<a href="#">
-							<img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
-							<p>Matinée</p>
-						</a>
-					</article>
+	<section class="slider">
+		<?php
+		$args = array('post_type' => 'film', 'posts' => 3);
+        $the_query = new WP_Query($args); ?>
+		<?php if ($the_query->have_posts()) : ?>
+		  <ul>
+		  	<?php while($the_query->have_posts()) : $the_query->the_post(); ?>
+		  		<?php echo get_the_post_thumbnail( $page->ID, 'thumbnail' ); ?>
+		  </ul>
+		  <?php endwhile; ?>
+		  <?php endif; wp_reset_postdata(); ?>
+	</section>        
+                  
+	<div class="container">
+		<section class="moment">
+			<div class="row">	
+				<article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 morning">	
+					<a href="#">
+						<img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
+						<p>Matinée</p>
+					</a>
+				</article>
 
-					<article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 day">
-						<a href="#">
-							<img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
-							<p>Journée</p>
-						</a>
-					</article>
+				<article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 day">
+					<a href="#">
+						<img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
+						<p>Journée</p>
+					</a>
+				</article>
 
-					<article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 night">
-						<a href="#">
-							<img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
-							<p>Soirée</p>
-						</a>
-					</article>
-				</div>
-			</section>
-			<div class="clear"></div>
+				<article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 night">
+					<a href="#">
+						<img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
+						<p>Soirée</p>
+					</a>
+				</article>
+			</div>
+		</section>
+		
+		<div class="clear"></div>
 
 			<div class="content_home">
 					<section class="col-md-6 col-lg-6 recipe">
