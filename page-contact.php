@@ -27,7 +27,7 @@
             <?php
             $terms = apply_filters( 'taxonomy-images-get-terms', '', array('taxonomy' => "L'Equipe") );
             foreach( (array) $terms as $term) {
-            echo wp_get_attachment_image( $term->image_id, "L'Equipe" );
+            echo the_thumbnail("L'Equipe");
             }?>
             <!-- <li><img src="img/eden.png"><span> Eden <br>Bitton</span></li>
            <li><img src="<?php echo get_template_directory_uri() ?>/img/benjamin.png"></li>
