@@ -17,29 +17,17 @@
 	<div class="container">
 		<section class="moment">
 			<div class="row">
-			// <?php
-			// 	$args = array( 'hide_empty' => 0 );
+			<?php
+				$terms = apply_filters( 'taxonomy-images-get-terms', '', array(
+				'taxonomy' => 'category',
+				'term_args' => array(
+					'name' => 'taxonomy',
+					)
+					) );
+				foreach( (array) $terms as $term) {
+				echo wp_get_attachment_image( $term->image_id, '' );
+			}?>
 
-			// 	$terms = get_terms( 'my_term', $args );
-			// 	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
-			// 	    $count = count( $terms );
-			// 	    $i = 0;
-			// 	    $term_list = '<p class="my_term-archive">';
-			// 	    foreach ( $terms as $term ) {
-			// 	        $i++;
-			// 	    	$term_list .= '<a href="' . get_term_link( $term ) . '" title="' . sprintf( __( 'View all post filed under %s', 'my_localization_domain' ), $term->name ) . '">' . $term->name . '</a>';
-			// 	    	if ( $count != $i ) {
-			// 	            $term_list .= ' &middot; ';
-			// 	        }
-			// 	        else {
-			// 	            $term_list .= '</p>';
-			// 	        }
-			// 	    }
-			// 	    echo $term_list;
-			// 	}
-
-				?>
-				
 				<article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 morning">	
 					<a href="#">
 						<img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>

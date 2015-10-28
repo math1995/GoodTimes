@@ -22,17 +22,22 @@
             </form>
         
 </section>
-<!-- <section class="team">
+<section class="team">
         <ul>
-            <li><img src="img/eden.png"><span> Eden <br>Bitton</span></li>
+            <?php
+            $terms = apply_filters( 'taxonomy-images-get-terms', '', array('taxonomy' => "L'Equipe") );
+            foreach( (array) $terms as $term) {
+            echo wp_get_attachment_image( $term->image_id, "L'Equipe" );
+            }?>
+            <!-- <li><img src="img/eden.png"><span> Eden <br>Bitton</span></li>
            <li><img src="<?php echo get_template_directory_uri() ?>/img/benjamin.png"></li>
              <li><img src="img/remi.png"><span> Rémi <br>Bonnet</span></li>
              <li><img src="img/benjamin.png"><span> Benjamin<br> Chareyron</span></li>
              <li><img src="img/noemie.png"><span> Noémie<br> Ferret</span></li>
-             <li><img src="img/mathieu.png"><span> Mathieu <br>Levi</span></li>
+             <li><img src="img/mathieu.png"><span> Mathieu <br>Levi</span></li> -->
              <div class="clear"></div>
         </ul>
-</section> -->
+</section>
 
 
 <?php get_footer(); ?>
