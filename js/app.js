@@ -1,4 +1,11 @@
 $(document).ready(function() {
+
+  $('#hamb').click( function() {
+  
+    $(this).toggleClass('animate');
+    
+  });
+
  
   $(".slider").owlCarousel({
  
