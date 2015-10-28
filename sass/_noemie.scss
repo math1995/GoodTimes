@@ -38,6 +38,18 @@
                             -moz-border-radius:5px;
                             -o-border-radius:5px;
                 }
+                a{
+                    color:$red; 
+                    font-size:20px; 
+                    border: 2px solid grey; 
+                    padding: 20px; 
+                    background-color:white;
+                    text-align:center;
+                    width:100px;
+                    height:100%;
+
+
+                }
             }
         
 	}
@@ -184,32 +196,32 @@
            }
                 
   }
-         .team{ 
-             ul{
-                list-style: none;
-                width:100%;
-                height:auto;
-                text-align:center;
-                margin-left:3%;
+    //      .team{ 
+    //          ul{
+    //             list-style: none;
+    //             width:100%;
+    //             height:auto;
+    //             text-align:center;
+    //             margin-left:3%;
 
-                li {
-                    float: left;
-                    img{ 
-                        display:block;
-                        width:200px;
-                        height:200px;
-                        margin:15px;
-                    }
-                     span{ 
-                        color:$red;
-                        width:10px;
-                        font-size:20px;
-                    }
+    //             li {
+    //                 float: left;
+    //                 img{ 
+    //                     display:block;
+    //                     width:200px;
+    //                     height:200px;
+    //                     margin:15px;
+    //                 }
+    //                  span{ 
+    //                     color:$red;
+    //                     width:10px;
+    //                     font-size:20px;
+    //                 }
 
-                }
-            }
+    //             }
+    //         }
        
-    }
+    // }
 
 }
    

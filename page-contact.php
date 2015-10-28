@@ -10,7 +10,7 @@
                     <input placeholder="Nom et Prénom"><?php the_field('nom_&_prenom'); ?></input>
                     <input placeholder="Email"><?php the_field('email'); ?></input>
                     <textarea placeholder="Message"><?php the_field('ecrire_un_message'); ?></textarea><br>
-                    <input type="submit" class="button" value="Envoyer"></input>
+                    <a href="#" >Envoyer</a>
                 </form>
             </div>
             <form method = "POST" class="mobile">
@@ -18,21 +18,21 @@
                 <input placeholder="Nom et Prénom"><?php the_field('nom_&_prenom'); ?></input>
                 <input placeholder="Email"><?php the_field('email'); ?></input>
                 <textarea placeholder="Message"><?php the_field('ecrire_un_message'); ?></textarea><br>
-                <input type="submit" class="button" value="Envoyer"></input>
+                <input type="text" class="button" value="Envoyer"></input>
             </form>
         
 </section>
-<section class="team">
+<!-- <section class="team">
         <ul>
-            <li><img src="http://lorempixel.com/150/150"><span> Eden <br>Bitton</span></li>
-<!--            <li><img src="<?php echo get_template_directory_uri() ?>/img/benjamin.png"></li>-->
-             <li><img src="http://lorempixel.com/150/150"><span> Rémi <br>Bonnet</span></li>
-             <li><img src="http://lorempixel.com/150/150"><span> Benjamin<br> Chareyron</span></li>
-             <li><img src="http://lorempixel.com/150/150"><span> Noémie<br> Ferret</span></li>
-             <li><img src="http://lorempixel.com/150/150"><span> Mathieu <br>Levi</span></li>
+            <li><img src="img/eden.png"><span> Eden <br>Bitton</span></li>
+           <li><img src="<?php echo get_template_directory_uri() ?>/img/benjamin.png"></li>
+             <li><img src="img/remi.png"><span> Rémi <br>Bonnet</span></li>
+             <li><img src="img/benjamin.png"><span> Benjamin<br> Chareyron</span></li>
+             <li><img src="img/noemie.png"><span> Noémie<br> Ferret</span></li>
+             <li><img src="img/mathieu.png"><span> Mathieu <br>Levi</span></li>
              <div class="clear"></div>
         </ul>
-</section>
+</section> -->
 
 
 <?php get_footer(); ?>
