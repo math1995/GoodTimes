@@ -4,27 +4,48 @@
 <body>
 	<section class="slider">
 		<?php
-		$args = array('post_type' => 'film', 'posts' => 3);
-        $the_query = new WP_Query($args); ?>
-		<?php if ($the_query->have_posts()) : ?>
-		  <ul>
-		  	<?php while($the_query->have_posts()) : $the_query->the_post(); ?>
-		  		<?php echo get_the_post_thumbnail( $page->ID, 'thumbnail' ); ?>
-		  </ul>
-		  <?php endwhile; ?>
-		  <?php endif; wp_reset_postdata(); ?>
+		//$args = array('post', 'posts' => 3);
+        //$the_query = new WP_Query($args); ?>
+		 <?php //if ($the_query->have_posts()) :
+		// 	  	while($the_query->have_posts()) : $the_query->the_post();
+		// 	  		the_post_thumbnail('homepage-slider');
+		// 	   endwhile;
+		//    endif; wp_reset_postdata(); 
+		?>
 	</section>        
                   
 	<div class="container">
 		<section class="moment">
-			<div class="row">	
+			<div class="row">
+			// <?php
+			// 	$args = array( 'hide_empty' => 0 );
+
+			// 	$terms = get_terms( 'my_term', $args );
+			// 	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+			// 	    $count = count( $terms );
+			// 	    $i = 0;
+			// 	    $term_list = '<p class="my_term-archive">';
+			// 	    foreach ( $terms as $term ) {
+			// 	        $i++;
+			// 	    	$term_list .= '<a href="' . get_term_link( $term ) . '" title="' . sprintf( __( 'View all post filed under %s', 'my_localization_domain' ), $term->name ) . '">' . $term->name . '</a>';
+			// 	    	if ( $count != $i ) {
+			// 	            $term_list .= ' &middot; ';
+			// 	        }
+			// 	        else {
+			// 	            $term_list .= '</p>';
+			// 	        }
+			// 	    }
+			// 	    echo $term_list;
+			// 	}
+
+				?>
+				
 				<article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 morning">	
 					<a href="#">
 						<img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
 						<p>Matinée</p>
 					</a>
 				</article>
-
 				<article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 day">
 					<a href="#">
 						<img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
@@ -59,7 +80,10 @@
 						</div>
 
 					</section>
+
 					<section class="col-md-6 col-lg-6 more_consult">
+
+
 						<h2>Les plus consultés</h2>
 							<a href="#">
 								<article>

@@ -71,8 +71,37 @@ function custom_post_type() {
 			'new_item_name' => 'Nouvelle catégorie de sortie',
 			'search_items' => 'Rechercher parmi les types de sortie'
 			),
+			'supports' => array(
+				'title',
+				'editor',
+				'thumbnail'),
 		'hierarchical' => true
 		)
+	);
+
+	register_post_type(
+		"L'Equipe",
+		array(
+			'label' => "L'Equipe",
+			'labels' => array(
+			'name' => "L'Equipe",
+			'singular_name' =>  "L'Equipe",
+			'all_items' => "Tous les membres de l'équipe",
+			'add_new_item' => 'Ajouter un membre',
+			'edit_item' => "Modifier les informations d'un membre",
+			'new_item' => 'Nouveau membre',
+			'view_item' => 'Voir le membre',
+			'search_items' => 'Rechercher parmi les membres',
+			'not_found' => 'Aucun membre trouvé',
+			'not_found_in_trash'=> 'Pas de membre dans la corbeille',
+			),
+		'public' => true,
+		'capability_type' => 'post',
+		'supports' => array(
+			'title',
+			'editor',
+			'thumbnail'),
+		'has_archive' => true)
 	);
 }
 
@@ -101,7 +130,7 @@ function my_get_all_post($args) {
 	return ($post);
 }
 
-// function my_get_random_post() {
+// function my_get_random_post($args) {
 // 	$args = my_get_all_post($args);
 // 	if ($args == NULL) {
 // 		echo "Il n'y a pas de recette du jour"
@@ -134,20 +163,11 @@ function most_consulted_recepees($postID) {
 }
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0); // Règle pb d'affichage selon les fonctions de wordpress
 
-// while ( have_posts() ) : the_post(); most_consulted_recepees(get_the_ID());
-
-// Pour Rémi fonction qui permet d'obtenir les images responsive automatiquement (et régler quelques pb)
+// Pour le carousel, redimensionnement des images
 // 
-
-function my_get_img_responsive($img) {
-	$img = preg_replace( '/(width|height)="\d*"\s/', "", $img);
-	return ($img);
-}
-
-add_filter( 'post_thumbnail_html', 'my_get_img_responsive', 10 ); //On supprime les attributs natifs des images avec add_filter
-add_filter( 'image_send_to_editor', 'my_get_img_responsive', 10 );
-add_filter( 'wp_get_attachment_link', 'my_get_img_responsive', 10 );
-
+	if (function_exists('add_image_size') ) {
+		add_image_size('homepage-slider', 1500, 700, true);
+	}
 // Fonction envoi de mail
 // 
 
@@ -221,11 +241,5 @@ if($_POST) {
 // 	$duration = get_taxonomy('duree')
 // }
 
-apply_filters( 'get_the_date', $the_date, $format );
+add_theme_support( 'post-thumbnails' );
 
-function action_function_name( $args ) {
-
-	echo '<input type="hidden" name="_my_hidden_input" value="TEST_IF_THIS_EXISTS_IN_SAVE_POST"';
-
-}
-add_action( 'acf/input/form_data', 'action_function_name', 10, 1 );
