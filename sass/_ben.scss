@@ -14,15 +14,14 @@ h2{
     line-height:100%;
 }
 
-section.headerCategory{
+div.headerCategory{
     
     background-size:cover;
     width:100%;
-    margin-top: 100px;
 
 
     .headerPic{
-        // background: url("http://lorempixel.com/1920/300");
+        background: url("http://lorempixel.com/1920/300");
         height:300px;
 
     }
@@ -66,7 +65,7 @@ section.eventsList{
 
         .eventThumbnail{
             height:190px;
-            // background:url('http://lorempixel.com/500/500');
+            background:url('http://lorempixel.com/500/500');
             background-size:cover;
             border-radius:5px 5px 0 0;
 

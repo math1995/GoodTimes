@@ -6,7 +6,7 @@
 </div>
 
 <div class="headerCategory">
-	<div class="headerPic"></div>
+	<section class="headerPic"></section>
 	<div class="navbarCategory">
 		<div class="container">
 		<h2>Les recettes pour vos soirées</h2>
@@ -16,8 +16,8 @@
 </div>
 
 <div class="container">
-
-	<div class="clear"></div>
+   
+	<div class="clear"></div  >
 	<section class="eventsList  col-xs-12 col-md-9">
 		<article class="eventItem">
 			<div class="eventThumbnail col-xs-12 col-md-4"></div>

@@ -32,6 +32,9 @@ a:active {
 	text-decoration: none;
 }
 
+.navbar{
+	margin-bottom:0px;
+}
 
 /* FOOTER */
 
@@ -51,7 +54,7 @@ footer {
 @media screen and (min-width: 0px) and (max-width: 750px) {
 	/* NavBar - Menu */
 	nav {
-
+		
 		background-color: transparent;
 		
 			#hamb {
