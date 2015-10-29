@@ -1,13 +1,8 @@
-$(document).ready(function() {
 
-  $('#hamb').click( function() {
-  
-    $(this).toggleClass('animate');
-    
-  });
 
+jQuery(document).ready(function() {
  
-  $(".slider").owlCarousel({
+ jQuery(".slider").owlCarousel({
  
       navigation : true,
       transitionStyle:"fade",
@@ -17,6 +12,6 @@ $(document).ready(function() {
       slideSpeed : 300,
       paginationSpeed : 400,
       singleItem:true
-  })
+  });
  
 });

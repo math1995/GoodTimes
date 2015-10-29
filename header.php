@@ -12,7 +12,6 @@
     <link href="<?php bloginfo('template_url'); ?>/lib/owl.carousel.css"/>
     
     <script src="<?php bloginfo('template_url');?>/lib/owl.carousel.min.js"></script>
-    <script src="<?php bloginfo('template_url');?>/js/app.js"></script>
   </head>
   
   <header>   
