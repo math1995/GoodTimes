@@ -13,44 +13,7 @@
                 display:none;
                 }
             }
-            form{ 
-              
-                text-align:center;
-                margin-top:20px;
-                
-                h2{ 
-                    font-weight:400;
-                    margin-bottom:20px;
-                }
-                
-                input{ 
-                    margin-bottom:10px;
-                    outline:none;
-                      border-radius:5px;
-                            -webkit-border-radius:5px;
-                            -moz-border-radius:5px;
-                            -o-border-radius:5px;
-                }
-                textarea{ 
-                    outline:none;
-                       border-radius:5px;
-                            -webkit-border-radius:5px;
-                            -moz-border-radius:5px;
-                            -o-border-radius:5px;
-                }
-                a{
-                    color:$red; 
-                    font-size:20px; 
-                    border: 2px solid grey; 
-                    padding: 20px; 
-                    background-color:white;
-                    text-align:center;
-                    width:100px;
-                    height:100%;
-
-
-                }
-            }
+            
         
 	}
     section.team{ 
@@ -141,88 +104,134 @@
        .content{
         width:100%; 
         
-            .bg-img{ 
-                background-image: url('img/page_contact.jpeg'); 
-                background-repeat: no-repeat;
-                background-size:cover; 
-                width:100%; 
-                height:650px;
+        .bg-img { 
+            background-image: url('img/page_contact.jpeg'); 
+            background-repeat: no-repeat;
+            background-size:cover; 
+            width:100%; 
+            height:650px;
+            
+        form {
+           max-width: 600px;
+           text-align: center;
+           margin: 20px auto;
+           padding-top: 270px;
+         
+        form.mobile {
+            display: none;
+        }
+      input, textarea {
+         border:0; outline:0;
+         padding: 1em;
+         border-radius : 8px;
+         display: block;
+         width: 100%;
+         margin-top: 1em;
+         font-family: 'Merriweather', sans-serif;
+         @include box-shadow(0 1px 1px rgba(black, 0.1));
+         resize: none;
+        
+        &:focus {
+           @include box-shadow(0 0px 2px rgba($red, 1)!important);
+        }
+      }
+    }
+        
+     // Bouton
+     
+        .animate
+        {
+            transition: all 0.1s;
+            -webkit-transition: all 0.1s;
+        }
+
+        .action-button
+        {
+        border-radius: 10px;
+        font-family: 'Quicksand', cursive;
+        font-size: 25px;
+        color: #FFF;
+        text-decoration: none;  
+        }
+
+        .red
+        {
+            background-color: #E74C3C;
+            border-bottom: 5px solid #BD3E31;
+            text-shadow: 0px -2px #2980B9;
+        }
+
+        .action-button:active
+        {
+            transform: translate(0px,5px);
+          -webkit-transform: translate(0px,5px);
+            border-bottom: 1px solid;
+        }
+          
+      // textarea {
+      //     height: 126px;
+      // }
+      //   }
+      //   .half {
+      //     float: left;
+      //     width: 48%;
+      //     margin-bottom: 1em;
+      //   }
+
+      //   .right { width: 50%; }
+
+      //   .left {
+      //        margin-right: 2%; 
+      //   }
+    }
+
+        @media (max-width: 480px) {
+          .half {
+             width: 100%; 
+             float: none;
+             margin-bottom: 0; 
+          }
+        }
+
+
+        /* Clearfix */
+        .cf:before,
+        .cf:after {
+            content: " "; /* 1 */
+            display: table; /* 2 */
+        }
+
+        .cf:after {
+            clear: both;
+        }
+    }
                 
-                form.desktop{ 
-                        text-align:center;
-                        top:60%;
-                        left:35%;
-                        width:300px;
-                        position:absolute;
+    .team{ 
+         ul{
+            list-style: none;
+            width:100%;
+            height:auto;
+            text-align:center;
+            margin-left:3%;
 
-                        h2{ 
-                            font-weight:400;
-                            margin-bottom:20px;
-                            text-align:center;
-                            margin-left:90px;
-                        }
+            li {
+                float: left;
+                img{ 
+                    display:block;
+                    width:200px;
+                    height:200px;
+                    margin:15px;
+                }
+                 span{ 
+                    color:$red;
+                    width:10px;
+                    font-size:20px;
+                }
 
-                        input{ 
-                            margin-bottom:10px;
-                            outline:none;
-                            width:400px;
-                            height:50px;
-                            border-radius:5px;
-                            -webkit-border-radius:5px;
-                            -moz-border-radius:5px;
-                            -o-border-radius:5px;
-
-                            .button{ 
-                                cursor:pointer; 
-                                background:$red; 
-                                border:none;
-                            }
-                        }
-                        textarea{ 
-                            outline:none;
-                            width:400px;
-                            height:80px;
-                               border-radius:5px;
-                            -webkit-border-radius:5px;
-                            -moz-border-radius:5px;
-                            -o-border-radius:5px;
-                            }
-                        
-                    }
-             }
-               
-         form.mobile{     
-                    display:none;
-           }
-                
-  }
-    //      .team{ 
-    //          ul{
-    //             list-style: none;
-    //             width:100%;
-    //             height:auto;
-    //             text-align:center;
-    //             margin-left:3%;
-
-    //             li {
-    //                 float: left;
-    //                 img{ 
-    //                     display:block;
-    //                     width:200px;
-    //                     height:200px;
-    //                     margin:15px;
-    //                 }
-    //                  span{ 
-    //                     color:$red;
-    //                     width:10px;
-    //                     font-size:20px;
-    //                 }
-
-    //             }
-    //         }
+            }
+        }
        
-    // }
-
+    }
 }
    
 

@@ -3,32 +3,26 @@
 <?php get_header(); ?>
 <body>
 	<section class="slider">
-		<?php
-		//$args = array('post', 'posts' => 3);
-        //$the_query = new WP_Query($args); ?>
-		 <?php //if ($the_query->have_posts()) :
-		// 	  	while($the_query->have_posts()) : $the_query->the_post();
-		// 	  		the_post_thumbnail('homepage-slider');
-		// 	   endwhile;
-		//    endif; wp_reset_postdata(); 
+	<?php
+		$args = array( 'post_type' => "Recettes", 'posts_per_page' => 5 );
+			$loop = new WP_Query( $args );
+			while ( $loop->have_posts() ) : $loop->the_post();
+			    the_title();
+			    the_post_thumbnail('medium');
+			    the_excerpt();
+			endwhile;
 		?>
 	</section>        
                   
 	<div class="container">
 		<section class="moment">
 			<div class="row">
-			<?php
-				$terms = apply_filters( 'taxonomy-images-get-terms', '', array(
-				'taxonomy' => 'category',
-				'term_args' => array(
-					'name' => 'taxonomy',
-					)
-					) );
-				foreach( (array) $terms as $term) {
-				echo wp_get_attachment_image( $term->image_id, '' );
-			}?>
+			<?php echo get_the_term_list( $post->ID, 'type', 'Matinée: ', ', ' ); ?>
 
-				<article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 morning">	
+
+
+				
+				<!-- <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 morning">	
 					<a href="#">
 						<img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
 						<p>Matinée</p>
@@ -46,7 +40,7 @@
 						<img class="img-circle" src="http://pipsum.com/200x200.jpg"></img>
 						<p>Soirée</p>
 					</a>
-				</article>
+				</article> -->
 			</div>
 		</section>
 		
@@ -56,9 +50,7 @@
 					<section class="col-md-6 col-lg-6 recipe">
 						<h2>La recette du jour !</h2>
 						<p class="content_recipe">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas orci ante, porta quis mollis a, efficitur
-							non risus. Nulla interdum leo at massa cursus, sed eleifend sapien mollis. Mauris commodo at nunc ac consequat. 
-							Integer rutrum arcu justo, eget luctus lacus mattis egestas.
+							<?php my_get_recipee_post(); ?>
 						</p>
 
 						<div class="moreread">

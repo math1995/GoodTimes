@@ -8,16 +8,26 @@ add_action( 'after_setup_theme', 'wpt_setup' );
         } endif;
 
 function wpt_register_js() {
-    wp_register_script('jquery.bootstrap.min', get_template_directory_uri() . '/lib/bootstrap.min.js', 'jquery');
-    wp_enqueue_script('jquery.bootstrap.min');
+    wp_enqueue_script( 'jquery', get_template_directory_uri() . '/lib/jquery-2.1.4.min.js');
+    wp_enqueue_script('owl.carousel.min.js', get_template_directory_uri() . 'lib/owl.carousel.min.js');
+    wp_enqueue_script('app.js', get_template_directory_uri() . '/js/app.js');
 }
+
 add_action( 'init', 'wpt_register_js' );
+
 function wpt_register_css() {
     wp_register_style( 'bootstrap.min', get_template_directory_uri() . '/lib/bootstrap.min.css' );
     wp_enqueue_style( 'bootstrap.min' );
+     wp_enqueue_style('owl.carousel.css', get_template_directory_uri() . 'lib/owl.carousel.css');
 }
+
 add_action( 'wp_enqueue_scripts', 'wpt_register_css' );
 
+// Rajouter les images à la une
+// ===========================
+// ===========================
+
+add_theme_support( 'post-thumbnails' );
 
 
 
@@ -30,7 +40,7 @@ function custom_post_type() {
 
 	// Onglet vers l'éditions des nouvelles sorties
 	register_post_type(
-		'projet',
+		'sorties',
 		array(
 			'label' => 'Sorties',
 			'labels' => array(
@@ -57,7 +67,7 @@ function custom_post_type() {
 	//  Catégories de sortie
 	register_taxonomy(
 		'type', 
-		'projet',
+		'sorties',
 		array(
 			'label' => 'Catégorie de sortie',
 			'labels' => array(
@@ -103,6 +113,56 @@ function custom_post_type() {
 			'thumbnail'),
 		'has_archive' => true)
 	);
+
+	register_post_type(
+		"Recettes",
+		array(
+			'label' => "Recettes",
+			'labels' => array(
+			'name' => "Recettes",
+			'singular_name' =>  "Recette",
+			'all_items' => "Toutes les recettes",
+			'add_new_item' => 'Créer une recette',
+			'edit_item' => "Modifier les informations d'une recette",
+			'new_item' => 'Nouvelle recette',
+			'view_item' => 'Consulter la recette',
+			'search_items' => 'Rechercher parmi les recettes',
+			'not_found' => 'Aucune recette trouvée',
+			'not_found_in_trash'=> 'Pas de recette dans la corbeille',
+			),
+		'public' => true,
+		'capability_type' => 'post',
+		'supports' => array(
+			'title',
+			'editor',
+			'thumbnail'),
+		'has_archive' => true)
+	);
+
+	register_taxonomy(
+		'Recettes', 
+		'post',
+		array(
+			'label' => 'Catégorie de recette',
+			'labels' => array(
+			'name' => 'Catégorie de recette',
+			'singular_name' => 'Catégorie de recette',
+			'all_items' => 'Toutes les catégories de recettes',
+			'edit_item' => 'Éditer les catégories de recettes',
+			'view_item' => 'Voir les catégories de recettes',
+			'update_item' => 'Mettre à jour les catégories de recettes',
+			'add_new_item' => 'Ajouter une catégorie de recettes',
+			'new_item_name' => 'Nouvelle catégorie de recette',
+			'search_items' => 'Rechercher parmi les types de sortie'
+			),
+			'supports' => array(
+				'title',
+				'editor',
+				'thumbnail'),
+		'hierarchical' => true,
+		'show_ui'
+		)
+	);
 }
 
 // 
@@ -116,18 +176,15 @@ function custom_post_type() {
 // 
 // 
 
-function my_get_all_post($args) {
-	$args = array( 'numberposts' => -1); 
-	$posts= get_posts( $args );
-	if ($posts) {
-	    foreach ($posts as $post) {
-	        setup_postdata( $GLOBALS['post'] =& $args);
-	        the_title();
-	        the_excerpt();
-	        the_post_thumbnail("small");
-	    }
-	}
-	return ($post);
+function my_get_recipee_post() {
+	$args = array( 'post_type' => "Recettes", 'posts_per_page' => 5 );
+	$loop = new WP_Query( $args );
+	while ( $loop->have_posts() ) : $loop->the_post();
+	    the_post_thumbnail('medium');
+	    echo '<br><br><br>';
+	    the_title();
+	    the_excerpt();
+	endwhile;
 }
 
 // function my_get_random_post($args) {
@@ -149,25 +206,10 @@ function my_get_all_post($args) {
 // Fonction reprise sur internet : http://patrickroux.fr/developpement/liste-des-contenus-wordpress-les-plus-consultes-sans-plugin-4717
 // 
 
-function most_consulted_recepees($postID) {
-    $meta_key = 'post_views_count'; //La clef, ou slug, de la méta-donnée
-    $count = get_post_meta($postID, $meta_key, true); //Extraction de la valeur, qui est finalement un compteur
-    if($count==''): //Si le compte est nul, la méta-donné n'existe pas, on va donc la créer
-        $count = 0; //Initialisation à 0
-        delete_post_meta($postID, $meta_key); //Simple précaution : si la méta-donnée existait déjà pour un autre usage exotique
-        add_post_meta($postID, $meta_key, '0'); //On ajoute la méta-donné
-    else:
-        $count++; // Si la méta-donnée existe, on l'incrémente
-        update_post_meta($postID, $meta_key, $count); //Et on met à jour
-    endif;
-}
+
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0); // Règle pb d'affichage selon les fonctions de wordpress
 
-// Pour le carousel, redimensionnement des images
-// 
-	if (function_exists('add_image_size') ) {
-		add_image_size('homepage-slider', 1500, 700, true);
-	}
+
 // Fonction envoi de mail
 // 
 
@@ -235,11 +277,4 @@ if($_POST) {
 		}
 	}
 }
-
-// function my_getRecipee_info($my_date, $duration) {
-// 	$my_date = get_the_date();
-// 	$duration = get_taxonomy('duree')
-// }
-
-add_theme_support( 'post-thumbnails' );
 
